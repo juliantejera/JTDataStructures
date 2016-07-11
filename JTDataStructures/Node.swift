@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct Node<T> {
+class Node<T> {
     
     let value: T
     var next: Node<T>?
     
-    init(value: value) {
+    init(value: T) {
         self.value = value
     }
 }
