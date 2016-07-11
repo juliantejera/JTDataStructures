@@ -14,6 +14,7 @@
 		B97FC1531D3351E600512342 /* JTDataStructuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC1521D3351E600512342 /* JTDataStructuresTests.swift */; };
 		B97FC15F1D33520000512342 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC15D1D33520000512342 /* Node.swift */; };
 		B97FC1601D33520000512342 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC15E1D33520000512342 /* Queue.swift */; };
+		B97FC1621D33546F00512342 /* QueueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC1611D33546F00512342 /* QueueSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		B97FC1541D3351E600512342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B97FC15D1D33520000512342 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		B97FC15E1D33520000512342 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		B97FC1611D33546F00512342 /* QueueSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueSpec.swift; sourceTree = "<group>"; };
 		F52F485FCB0DA487DA6C6735 /* Pods_JTDataStructuresTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTDataStructuresTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA75547D13F117614436522 /* Pods-JTDataStructuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructuresTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD41B9F431F9E71C40B9FA35 /* Pods-JTDataStructuresTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructuresTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				B97FC1521D3351E600512342 /* JTDataStructuresTests.swift */,
+				B97FC1611D33546F00512342 /* QueueSpec.swift */,
 				B97FC1541D3351E600512342 /* Info.plist */,
 			);
 			path = JTDataStructuresTests;
@@ -324,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97FC1621D33546F00512342 /* QueueSpec.swift in Sources */,
 				B97FC1531D3351E600512342 /* JTDataStructuresTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
