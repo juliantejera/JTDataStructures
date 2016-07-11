@@ -1,0 +1,6 @@
+framework module Pods_JTDataStructures {
+  umbrella header "Pods-JTDataStructures-umbrella.h"
+
+  export *
+  module * { export * }
+}

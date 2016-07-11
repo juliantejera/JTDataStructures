@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9B9A77FCDE09BB6BE9B8EEF9 /* Pods_JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2582438B3F2907F7E85896A4 /* Pods_JTDataStructures.framework */; };
 		AE819F0141C4E5908F041A23 /* Pods_JTDataStructuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52F485FCB0DA487DA6C6735 /* Pods_JTDataStructuresTests.framework */; };
+		B9710DE71D33BFB6003EF6A9 /* StackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */; };
+		B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE81D33C160003EF6A9 /* Stack.swift */; };
 		B97FC1471D3351E600512342 /* JTDataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = B97FC1461D3351E600512342 /* JTDataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B97FC14E1D3351E600512342 /* JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97FC1431D3351E600512342 /* JTDataStructures.framework */; };
 		B97FC1531D3351E600512342 /* JTDataStructuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC1521D3351E600512342 /* JTDataStructuresTests.swift */; };
@@ -31,6 +33,8 @@
 		12B75F6BDC054AF5B88AD5DE /* Pods-JTDataStructures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructures.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructures/Pods-JTDataStructures.release.xcconfig"; sourceTree = "<group>"; };
 		2582438B3F2907F7E85896A4 /* Pods_JTDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90FB904429E5A3BE1CBF56B0 /* Pods-JTDataStructures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructures/Pods-JTDataStructures.debug.xcconfig"; sourceTree = "<group>"; };
+		B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackSpec.swift; sourceTree = "<group>"; };
+		B9710DE81D33C160003EF6A9 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		B97FC1431D3351E600512342 /* JTDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B97FC1461D3351E600512342 /* JTDataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTDataStructures.h; sourceTree = "<group>"; };
 		B97FC1481D3351E600512342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 			children = (
 				B97FC15D1D33520000512342 /* Node.swift */,
 				B97FC15E1D33520000512342 /* Queue.swift */,
+				B9710DE81D33C160003EF6A9 /* Stack.swift */,
 				B97FC1461D3351E600512342 /* JTDataStructures.h */,
 				B97FC1481D3351E600512342 /* Info.plist */,
 			);
@@ -123,6 +128,7 @@
 				B97FC1521D3351E600512342 /* JTDataStructuresTests.swift */,
 				B97FC1611D33546F00512342 /* QueueSpec.swift */,
 				B97FC1541D3351E600512342 /* Info.plist */,
+				B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */,
 			);
 			path = JTDataStructuresTests;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B97FC15F1D33520000512342 /* Node.swift in Sources */,
+				B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */,
 				B97FC1601D33520000512342 /* Queue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +336,7 @@
 			files = (
 				B97FC1621D33546F00512342 /* QueueSpec.swift in Sources */,
 				B97FC1531D3351E600512342 /* JTDataStructuresTests.swift in Sources */,
+				B9710DE71D33BFB6003EF6A9 /* StackSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
