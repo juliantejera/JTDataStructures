@@ -85,6 +85,6 @@ public struct PriorityQueue<T> {
     }
     
     private func rightIndex(i: Int) -> Int {
-        return (i << 2) + 2
+        return (i << 1) + 2
     }
 }
