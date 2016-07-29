@@ -10,6 +10,8 @@
 		9B9A77FCDE09BB6BE9B8EEF9 /* Pods_JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2582438B3F2907F7E85896A4 /* Pods_JTDataStructures.framework */; };
 		AE819F0141C4E5908F041A23 /* Pods_JTDataStructuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52F485FCB0DA487DA6C6735 /* Pods_JTDataStructuresTests.framework */; };
 		B91070F01D3FA2910005ED06 /* QuickSorterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91070EF1D3FA2910005ED06 /* QuickSorterSpec.swift */; };
+		B91070F21D4075FC0005ED06 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91070F11D4075FC0005ED06 /* BinarySearchTree.swift */; };
+		B91070F41D40F5130005ED06 /* BinarySearchTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91070F31D40F5130005ED06 /* BinarySearchTreeNode.swift */; };
 		B9710DE71D33BFB6003EF6A9 /* StackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */; };
 		B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE81D33C160003EF6A9 /* Stack.swift */; };
 		B9710DEB1D347285003EF6A9 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */; };
@@ -21,6 +23,9 @@
 		B97FC15F1D33520000512342 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC15D1D33520000512342 /* Node.swift */; };
 		B97FC1601D33520000512342 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC15E1D33520000512342 /* Queue.swift */; };
 		B97FC1621D33546F00512342 /* QueueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC1611D33546F00512342 /* QueueSpec.swift */; };
+		B98F546A1D4AF91400B6FFAB /* BinarySearchTreeNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F54691D4AF91400B6FFAB /* BinarySearchTreeNodeSpec.swift */; };
+		B98F546C1D4AFA1300B6FFAB /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F546B1D4AFA1300B6FFAB /* Factory.swift */; };
+		B98F546E1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F546D1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,8 @@
 		2582438B3F2907F7E85896A4 /* Pods_JTDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90FB904429E5A3BE1CBF56B0 /* Pods-JTDataStructures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructures/Pods-JTDataStructures.debug.xcconfig"; sourceTree = "<group>"; };
 		B91070EF1D3FA2910005ED06 /* QuickSorterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSorterSpec.swift; sourceTree = "<group>"; };
+		B91070F11D4075FC0005ED06 /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
+		B91070F31D40F5130005ED06 /* BinarySearchTreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNode.swift; sourceTree = "<group>"; };
 		B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackSpec.swift; sourceTree = "<group>"; };
 		B9710DE81D33C160003EF6A9 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
@@ -52,6 +59,9 @@
 		B97FC15D1D33520000512342 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		B97FC15E1D33520000512342 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		B97FC1611D33546F00512342 /* QueueSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueSpec.swift; sourceTree = "<group>"; };
+		B98F54691D4AF91400B6FFAB /* BinarySearchTreeNodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNodeSpec.swift; sourceTree = "<group>"; };
+		B98F546B1D4AFA1300B6FFAB /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		B98F546D1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeSpec.swift; sourceTree = "<group>"; };
 		F52F485FCB0DA487DA6C6735 /* Pods_JTDataStructuresTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTDataStructuresTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA75547D13F117614436522 /* Pods-JTDataStructuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructuresTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD41B9F431F9E71C40B9FA35 /* Pods-JTDataStructuresTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructuresTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +136,8 @@
 				B9710DE81D33C160003EF6A9 /* Stack.swift */,
 				B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */,
 				B9710DEE1D3900AF003EF6A9 /* QuickSorter.swift */,
+				B91070F11D4075FC0005ED06 /* BinarySearchTree.swift */,
+				B91070F31D40F5130005ED06 /* BinarySearchTreeNode.swift */,
 				B97FC1461D3351E600512342 /* JTDataStructures.h */,
 				B97FC1481D3351E600512342 /* Info.plist */,
 			);
@@ -136,11 +148,14 @@
 			isa = PBXGroup;
 			children = (
 				B97FC1521D3351E600512342 /* JTDataStructuresTests.swift */,
+				B98F546B1D4AFA1300B6FFAB /* Factory.swift */,
 				B9710DEC1D3478B1003EF6A9 /* PriorityQueueSpec.swift */,
 				B97FC1611D33546F00512342 /* QueueSpec.swift */,
 				B97FC1541D3351E600512342 /* Info.plist */,
 				B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */,
 				B91070EF1D3FA2910005ED06 /* QuickSorterSpec.swift */,
+				B98F54691D4AF91400B6FFAB /* BinarySearchTreeNodeSpec.swift */,
+				B98F546D1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift */,
 			);
 			path = JTDataStructuresTests;
 			sourceTree = "<group>";
@@ -336,8 +351,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B91070F41D40F5130005ED06 /* BinarySearchTreeNode.swift in Sources */,
 				B97FC15F1D33520000512342 /* Node.swift in Sources */,
 				B9710DEB1D347285003EF6A9 /* PriorityQueue.swift in Sources */,
+				B91070F21D4075FC0005ED06 /* BinarySearchTree.swift in Sources */,
 				B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */,
 				B97FC1601D33520000512342 /* Queue.swift in Sources */,
 				B9710DEF1D3900AF003EF6A9 /* QuickSorter.swift in Sources */,
@@ -349,10 +366,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9710DED1D3478B1003EF6A9 /* PriorityQueueSpec.swift in Sources */,
+				B98F546A1D4AF91400B6FFAB /* BinarySearchTreeNodeSpec.swift in Sources */,
 				B91070F01D3FA2910005ED06 /* QuickSorterSpec.swift in Sources */,
+				B98F546E1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift in Sources */,
 				B97FC1621D33546F00512342 /* QueueSpec.swift in Sources */,
 				B97FC1531D3351E600512342 /* JTDataStructuresTests.swift in Sources */,
 				B9710DE71D33BFB6003EF6A9 /* StackSpec.swift in Sources */,
+				B98F546C1D4AFA1300B6FFAB /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
