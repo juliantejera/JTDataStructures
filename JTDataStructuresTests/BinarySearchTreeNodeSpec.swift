@@ -210,6 +210,63 @@ class BinarySearchTreeNodeSpec: QuickSpec {
                     }
                 }
             }
+            
+            describe("hasChildren") {
+                
+                context("when the left child isn't nil") {
+                    
+                    beforeEach {
+                        node = factory.createBinarySearchTreeNode(5)
+                        node.left = factory.createBinarySearchTreeNode(3)
+                    }
+                    
+                    it("returns true") {
+                        expect(node.hasChildren).to(beTrue())
+                    }
+
+                }
+                
+                context("when the right child isn't nil") {
+                    
+                    beforeEach {
+                        node = factory.createBinarySearchTreeNode(5)
+                        node.right = factory.createBinarySearchTreeNode(7)
+                    }
+                    
+                    it("returns true") {
+                        expect(node.hasChildren).to(beTrue())
+                    }
+                }
+                
+                context("when the right and left child are not nil") {
+                    
+                    beforeEach {
+                        node = factory.createBinarySearchTreeNode(5)
+                        node.left = factory.createBinarySearchTreeNode(3)
+                        node.left = factory.createBinarySearchTreeNode(7)
+                    }
+                    
+                    it("returns true") {
+                        expect(node.hasChildren).to(beTrue())
+                    }
+                }
+                
+                context("when both children are nil") {
+                    
+                    beforeEach {
+                        node = factory.createBinarySearchTreeNode(5)
+                    }
+                    
+                    it("returns false") {
+                        expect(node.hasChildren).to(beFalse())
+                    }
+                }
+
+
+
+
+            }
+            
 
         }
     }

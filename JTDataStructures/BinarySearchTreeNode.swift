@@ -26,6 +26,10 @@ public class BinarySearchTreeNode<T: Comparable> {
         return i
     }
     
+    public var hasChildren: Bool {
+        return left != nil || right != nil
+    }
+    
     public var isLeftChild: Bool {
         return parent?.left === self
     }
