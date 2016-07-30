@@ -81,6 +81,92 @@ class BinarySearchTreeSpec: QuickSpec {
                 }
 
             }
+            
+            describe("remove") {
+                
+                beforeEach {
+                    tree = BinarySearchTree<Int>()
+                    tree.insert(7)
+                    tree.insert(2)
+                    tree.insert(10)
+                    tree.insert(1)
+                    tree.insert(5)
+                    tree.insert(9)
+                }
+                
+                it("decreases the count of nodes") {
+                    tree.remove(9)
+                    expect(tree.count).to(equal(5))
+                }
+                
+                context("when the node to be removed is a leaf node") {
+                    
+                    beforeEach {
+                        tree.remove(5)
+                    }
+                    
+                    it("removes the leaf node") {
+                        expect(tree.search(2)?.right).to(beNil())
+                    }
+                
+                }
+                
+                context("when the node to be removed has only one child") {
+                    
+                    beforeEach {
+                        tree.remove(10)
+                    }
+                    
+                    it("links that child to the parent node") {
+                        let parent = tree.search(7)!
+                        let child = tree.search(9)!
+                        
+                        expect(parent.right).to(beIdenticalTo(child))
+                        expect(child.parent).to(beIdenticalTo(parent))
+                    }
+                    
+                }
+                
+                
+                context("when the node to be removed has two children") {
+                    
+                    beforeEach {
+                        tree.remove(2)
+                    }
+                    
+                    it("replaces this node with the successor") {
+                        let x = tree.search(7)
+                        let y = tree.search(5)
+                        let z = tree.search(1)
+                        expect(x?.left).to(beIdenticalTo(y))
+                        expect(y?.parent).to(beIdenticalTo(x))
+                        expect(y?.left).to(beIdenticalTo(z))
+                        expect(z?.parent).to(beIdenticalTo(y))
+                    }
+                    
+                }
+                
+                
+                context("when the node to be removed has two children and is the root") {
+                    
+                    beforeEach {
+                        tree.remove(7)
+                    }
+                    
+                    it("replaces this node with the successor") {
+                        let x = tree.search(9)
+                        let y = tree.search(10)
+                        let z = tree.search(2)
+                        expect(x?.right).to(beIdenticalTo(y))
+                        expect(y?.parent).to(beIdenticalTo(x))
+                        expect(x?.left).to(beIdenticalTo(z))
+                        expect(z?.parent).to(beIdenticalTo(x))
+                    }
+                    
+                }
+                
+                
+            }
         }
     }
     

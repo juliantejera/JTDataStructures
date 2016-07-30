@@ -58,5 +58,42 @@ public class BinarySearchTree<T: Comparable> {
             return search(currentNode?.right, value: value)
         }
     }
+    
+    
+    private func transplant(node: BinarySearchTreeNode<T>, child: BinarySearchTreeNode<T>?) {
+        if node.isOrphan {
+            root = child
+        } else if node.isLeftChild {
+            node.parent?.left = child
+        } else {
+            node.parent?.right = child
+        }
+        
+        child?.parent = node.parent
+    }
+    
+    public func remove(value: T) {
+        if let node = search(value) {
+            remove(node)
+            count -= 1
+        }
+    }
+    
+    public func remove(node: BinarySearchTreeNode<T>) {
+        if node.left == nil {
+            transplant(node, child: node.right)
+        } else if node.right == nil {
+            transplant(node, child: node.left)
+        } else if let successor = node.right?.minimum {
+            if successor.parent !== node {
+                transplant(successor, child: successor.right)
+                successor.right = node.right
+                successor.right?.parent = successor
+            }
+            transplant(node, child: successor)
+            successor.left = node.left
+            successor.left?.parent = successor
+        }
+    }
   
 }
