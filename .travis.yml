@@ -2,4 +2,4 @@ language: objective-c
 osx_image: xcode7.3
 script:
   - xctool -workspace JTDataStructures.xcworkspace -scheme JTDataStructures -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-  - xctool test -workspace JTDataStructures.xcworkspace -scheme JTDataStructuresTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xctool test -workspace JTDataStructures.xcworkspace -scheme JTDataStructures -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
