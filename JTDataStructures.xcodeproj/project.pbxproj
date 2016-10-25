@@ -12,6 +12,8 @@
 		B91070F01D3FA2910005ED06 /* QuickSorterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91070EF1D3FA2910005ED06 /* QuickSorterSpec.swift */; };
 		B91070F21D4075FC0005ED06 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91070F11D4075FC0005ED06 /* BinarySearchTree.swift */; };
 		B91070F41D40F5130005ED06 /* BinarySearchTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91070F31D40F5130005ED06 /* BinarySearchTreeNode.swift */; };
+		B9127B9E1DBF09120031ED90 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9127B9D1DBF09120031ED90 /* DoublyLinkedList.swift */; };
+		B9127BA01DBF0ED90031ED90 /* DoublyLinkedListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9127B9F1DBF0ED90031ED90 /* DoublyLinkedListSpec.swift */; };
 		B9710DE71D33BFB6003EF6A9 /* StackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */; };
 		B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE81D33C160003EF6A9 /* Stack.swift */; };
 		B9710DEB1D347285003EF6A9 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */; };
@@ -44,6 +46,8 @@
 		B91070EF1D3FA2910005ED06 /* QuickSorterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSorterSpec.swift; sourceTree = "<group>"; };
 		B91070F11D4075FC0005ED06 /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		B91070F31D40F5130005ED06 /* BinarySearchTreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNode.swift; sourceTree = "<group>"; };
+		B9127B9D1DBF09120031ED90 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		B9127B9F1DBF0ED90031ED90 /* DoublyLinkedListSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListSpec.swift; sourceTree = "<group>"; };
 		B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackSpec.swift; sourceTree = "<group>"; };
 		B9710DE81D33C160003EF6A9 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B97FC15D1D33520000512342 /* Node.swift */,
+				B9127B9D1DBF09120031ED90 /* DoublyLinkedList.swift */,
 				B97FC15E1D33520000512342 /* Queue.swift */,
 				B9710DE81D33C160003EF6A9 /* Stack.swift */,
 				B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */,
@@ -147,6 +152,7 @@
 			children = (
 				B98F546B1D4AFA1300B6FFAB /* Factory.swift */,
 				B9710DEC1D3478B1003EF6A9 /* PriorityQueueSpec.swift */,
+				B9127B9F1DBF0ED90031ED90 /* DoublyLinkedListSpec.swift */,
 				B97FC1611D33546F00512342 /* QueueSpec.swift */,
 				B97FC1541D3351E600512342 /* Info.plist */,
 				B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */,
@@ -353,6 +359,7 @@
 				B91070F41D40F5130005ED06 /* BinarySearchTreeNode.swift in Sources */,
 				B97FC15F1D33520000512342 /* Node.swift in Sources */,
 				B9710DEB1D347285003EF6A9 /* PriorityQueue.swift in Sources */,
+				B9127B9E1DBF09120031ED90 /* DoublyLinkedList.swift in Sources */,
 				B91070F21D4075FC0005ED06 /* BinarySearchTree.swift in Sources */,
 				B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */,
 				B97FC1601D33520000512342 /* Queue.swift in Sources */,
@@ -366,6 +373,7 @@
 			files = (
 				B9710DED1D3478B1003EF6A9 /* PriorityQueueSpec.swift in Sources */,
 				B98F546A1D4AF91400B6FFAB /* BinarySearchTreeNodeSpec.swift in Sources */,
+				B9127BA01DBF0ED90031ED90 /* DoublyLinkedListSpec.swift in Sources */,
 				B91070F01D3FA2910005ED06 /* QuickSorterSpec.swift in Sources */,
 				B98F546E1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift in Sources */,
 				B97FC1621D33546F00512342 /* QueueSpec.swift in Sources */,
