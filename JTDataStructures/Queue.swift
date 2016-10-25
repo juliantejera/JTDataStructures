@@ -18,7 +18,7 @@ public struct Queue<T> {
         return head == nil
     }
     
-    public mutating func enqueue(_ value: T) {
+    public mutating func enqueue(value: T) {
         let node = Node(value: value)
         
         if head == nil {

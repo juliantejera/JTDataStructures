@@ -22,10 +22,10 @@ class QueueSpec: QuickSpec {
                 
                 beforeEach {
                     queue = Queue<Int>()
-                    queue.enqueue(1)
-                    queue.enqueue(2)
-                    queue.enqueue(3)
-                    queue.enqueue(4)
+                    queue.enqueue(value: 1)
+                    queue.enqueue(value: 2)
+                    queue.enqueue(value: 3)
+                    queue.enqueue(value: 4)
                 }
                 
                 it("adds the elements to the queue") {
@@ -40,10 +40,10 @@ class QueueSpec: QuickSpec {
                     
                     beforeEach {
                         queue = Queue<Int>()
-                        queue.enqueue(1)
-                        queue.enqueue(2)
-                        queue.enqueue(3)
-                        queue.enqueue(4)
+                        queue.enqueue(value: 1)
+                        queue.enqueue(value: 2)
+                        queue.enqueue(value: 3)
+                        queue.enqueue(value: 4)
                     }
                     
                     it("dequeues the elements in the right order") {
@@ -92,7 +92,7 @@ class QueueSpec: QuickSpec {
                     
                     beforeEach {
                         queue = Queue<Int>()
-                        queue.enqueue(1)
+                        queue.enqueue(value: 1)
                     }
                     
                     it("returns false") {
