@@ -24,10 +24,10 @@ open class BinarySearchTree<T: Comparable> {
     open fileprivate(set) var root: BinarySearchTreeNode<T>?
     open fileprivate(set) var count = 0
     
-    open func insert(_ value: T) {
+    open func insert(value: T) {
         
         if let root = root {
-            insert(root, value: value)
+            insert(currentNode: root, value: value)
         } else {
             root = BinarySearchTreeNode(value: value)
         }
@@ -35,17 +35,17 @@ open class BinarySearchTree<T: Comparable> {
         count += 1
     }
     
-    fileprivate func insert(_ currentNode: BinarySearchTreeNode<T>, value: T) {
+    fileprivate func insert(currentNode: BinarySearchTreeNode<T>, value: T) {
         if value < currentNode.value {
             if let left = currentNode.left {
-                insert(left, value: value)
+                insert(currentNode: left, value: value)
             } else {
                 currentNode.left = BinarySearchTreeNode(value: value)
                 currentNode.left?.parent = currentNode
             }
         } else {
             if let right = currentNode.right {
-                insert(right, value: value)
+                insert(currentNode: right, value: value)
             } else {
                 currentNode.right = BinarySearchTreeNode(value: value)
                 currentNode.right?.parent = currentNode
@@ -54,24 +54,24 @@ open class BinarySearchTree<T: Comparable> {
         
     }
     
-    open func search(_ value: T) -> BinarySearchTreeNode<T>? {
-        return search(root, value: value)
+    open func search(value: T) -> BinarySearchTreeNode<T>? {
+        return search(currentNode: root, value: value)
     }
     
-    fileprivate func search(_ currentNode: BinarySearchTreeNode<T>?, value: T) -> BinarySearchTreeNode<T>? {
+    fileprivate func search(currentNode: BinarySearchTreeNode<T>?, value: T) -> BinarySearchTreeNode<T>? {
         if currentNode?.value == value || currentNode == nil {
             return currentNode
         }
         
         if value < currentNode?.value {
-            return search(currentNode?.left, value: value)
+            return search(currentNode: currentNode?.left, value: value)
         } else {
-            return search(currentNode?.right, value: value)
+            return search(currentNode: currentNode?.right, value: value)
         }
     }
     
     
-    fileprivate func transplant(_ node: BinarySearchTreeNode<T>, child: BinarySearchTreeNode<T>?) {
+    fileprivate func transplant(node: BinarySearchTreeNode<T>, child: BinarySearchTreeNode<T>?) {
         if node.isOrphan {
             root = child
         } else if node.isLeftChild {
@@ -83,25 +83,25 @@ open class BinarySearchTree<T: Comparable> {
         child?.parent = node.parent
     }
     
-    open func remove(_ value: T) {
-        if let node = search(value) {
-            remove(node)
+    open func remove(value: T) {
+        if let node = search(value: value) {
+            remove(node: node)
             count -= 1
         }
     }
     
-    open func remove(_ node: BinarySearchTreeNode<T>) {
+    open func remove(node: BinarySearchTreeNode<T>) {
         if node.left == nil {
-            transplant(node, child: node.right)
+            transplant(node: node, child: node.right)
         } else if node.right == nil {
-            transplant(node, child: node.left)
+            transplant(node: node, child: node.left)
         } else if let successor = node.right?.minimum {
             if successor.parent !== node {
-                transplant(successor, child: successor.right)
+                transplant(node: successor, child: successor.right)
                 successor.right = node.right
                 successor.right?.parent = successor
             }
-            transplant(node, child: successor)
+            transplant(node: node, child: successor)
             successor.left = node.left
             successor.left?.parent = successor
         }

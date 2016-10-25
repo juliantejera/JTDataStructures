@@ -133,17 +133,17 @@ class BinarySearchTreeNodeSpec: QuickSpec {
                 
                 beforeEach {
                     tree = BinarySearchTree<Int>()
-                    tree.insert(15)
-                    tree.insert(6)
-                    tree.insert(18)
-                    tree.insert(3)
-                    tree.insert(7)
-                    tree.insert(17)
-                    tree.insert(20)
-                    tree.insert(2)
-                    tree.insert(4)
-                    tree.insert(13)
-                    tree.insert(9)
+                    tree.insert(value: 15)
+                    tree.insert(value: 6)
+                    tree.insert(value: 18)
+                    tree.insert(value: 3)
+                    tree.insert(value: 7)
+                    tree.insert(value: 17)
+                    tree.insert(value: 20)
+                    tree.insert(value: 2)
+                    tree.insert(value: 4)
+                    tree.insert(value: 13)
+                    tree.insert(value: 9)
                 }
                 
                 context("when the right subtree of the node is nonempty") {
@@ -160,7 +160,7 @@ class BinarySearchTreeNodeSpec: QuickSpec {
                 context("when the right subtree of the node is empty") {
                     
                     beforeEach {
-                        node = tree.search(13)
+                        node = tree.search(value: 13)
                     }
                     
                     it("returns the lowest ancestor whose left child is also an ancesor of the node") {
@@ -175,17 +175,17 @@ class BinarySearchTreeNodeSpec: QuickSpec {
                 
                 beforeEach {
                     tree = BinarySearchTree<Int>()
-                    tree.insert(15)
-                    tree.insert(6)
-                    tree.insert(18)
-                    tree.insert(3)
-                    tree.insert(7)
-                    tree.insert(17)
-                    tree.insert(20)
-                    tree.insert(2)
-                    tree.insert(4)
-                    tree.insert(13)
-                    tree.insert(9)
+                    tree.insert(value: 15)
+                    tree.insert(value: 6)
+                    tree.insert(value: 18)
+                    tree.insert(value: 3)
+                    tree.insert(value: 7)
+                    tree.insert(value: 17)
+                    tree.insert(value: 20)
+                    tree.insert(value: 2)
+                    tree.insert(value: 4)
+                    tree.insert(value: 13)
+                    tree.insert(value: 9)
                 }
                 
                 context("when the left subtree of the node is nonempty") {
@@ -202,7 +202,7 @@ class BinarySearchTreeNodeSpec: QuickSpec {
                 context("when the right subtree of the node is empty") {
                     
                     beforeEach {
-                        node = tree.search(9)
+                        node = tree.search(value: 9)
                     }
                     
                     it("returns the lowest ancestor whose right child is also an ancesor of the node") {
