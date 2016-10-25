@@ -7,17 +7,6 @@
 //
 
 import Foundation
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
 
 open class BinarySearchTree<T: Comparable> {
     
@@ -59,14 +48,16 @@ open class BinarySearchTree<T: Comparable> {
     }
     
     fileprivate func search(currentNode: BinarySearchTreeNode<T>?, value: T) -> BinarySearchTreeNode<T>? {
-        if currentNode?.value == value || currentNode == nil {
-            return currentNode
-        }
         
-        if value < currentNode?.value {
-            return search(currentNode: currentNode?.left, value: value)
+        guard let currentNode = currentNode else {
+            return nil
+        }
+        if currentNode.value == value {
+            return currentNode
+        } else if value < currentNode.value {
+            return search(currentNode: currentNode.left, value: value)
         } else {
-            return search(currentNode: currentNode?.right, value: value)
+            return search(currentNode: currentNode.right, value: value)
         }
     }
     
