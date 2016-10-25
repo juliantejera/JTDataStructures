@@ -10,7 +10,7 @@ import Foundation
 
 public struct QuickSorter<T: Comparable> {
     
-    public func sort(inout array: [T], low: Int, high: Int) {
+    public func sort(_ array: inout [T], low: Int, high: Int) {
         if low < high {
             let p = partition(&array, low: low, high: high)
             sort(&array, low: low, high: p)
@@ -19,9 +19,9 @@ public struct QuickSorter<T: Comparable> {
     }
     
     // Hoare's Partition
-    private func partition(inout array: [T], low: Int, high: Int) -> Int {
+    fileprivate func partition(_ array: inout [T], low: Int, high: Int) -> Int {
         
-        let pivot = array[random() % array.count]
+        let pivot = array[Int(arc4random()) % array.count]
         var i = low - 1
         var j = high + 1
         
