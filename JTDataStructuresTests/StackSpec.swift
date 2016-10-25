@@ -24,8 +24,8 @@ class StackSpec: QuickSpec {
                 
                 beforeEach {
                     stack = Stack<Int>()
-                    stack.push(1)
-                    stack.push(2)
+                    stack.push(value: 1)
+                    stack.push(value: 2)
                 }
                 
                 it("adds elements to the stack") {
@@ -50,9 +50,9 @@ class StackSpec: QuickSpec {
                     
                     beforeEach {
                         stack = Stack<Int>()
-                        stack.push(3)
-                        stack.push(2)
-                        stack.push(1)
+                        stack.push(value: 3)
+                        stack.push(value: 2)
+                        stack.push(value: 1)
                     }
                     
                     it("pops them in the right order") {
@@ -82,7 +82,7 @@ class StackSpec: QuickSpec {
                     
                     beforeEach {
                         stack = Stack<Int>()
-                        stack.push(Int.max)
+                        stack.push(value: Int.max)
                     }
                     it("returns the one at the top") {
                         expect(stack.peek()).to(equal(Int.max))

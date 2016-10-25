@@ -16,7 +16,7 @@ open class Stack<T> {
         return top == nil
     }
     
-    open func push(_ value: T) {
+    open func push(value: T) {
         let node = Node(value: value)
         node.next = top
         top = node
