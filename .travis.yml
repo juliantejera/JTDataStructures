@@ -1,4 +1,3 @@
 language: objective-c
-osx_image: xcode8
-xcode_workspace: JTDataStructures
+xcode_workspace: JTDataStructures.xcworkspace
 xcode_scheme: JTDataStructures
