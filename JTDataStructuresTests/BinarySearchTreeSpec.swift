@@ -24,13 +24,13 @@ class BinarySearchTreeSpec: QuickSpec {
                 
                 beforeEach {
                     tree = BinarySearchTree<Int>()
-                    tree.insert(15)
-                    tree.insert(6)
-                    tree.insert(18)
-                    tree.insert(3)
-                    tree.insert(7)
-                    tree.insert(17)
-                    tree.insert(20)
+                    tree.insert(value: 15)
+                    tree.insert(value: 6)
+                    tree.insert(value: 18)
+                    tree.insert(value: 3)
+                    tree.insert(value: 7)
+                    tree.insert(value: 17)
+                    tree.insert(value: 20)
                 }
                 
                 it("adds element in the expected order") {
@@ -54,29 +54,29 @@ class BinarySearchTreeSpec: QuickSpec {
                     
                     beforeEach {
                         tree = BinarySearchTree<Int>()
-                        tree.insert(15)
-                        tree.insert(6)
+                        tree.insert(value: 15)
+                        tree.insert(value: 6)
                     }
                     
                     it("returns nil") {
-                        expect(tree.search(1)).to(beNil())
+                        expect(tree.search(value: 1)).to(beNil())
                     }
                 }
                 
                 context("when the value is in the tree") {
                     beforeEach {
                         tree = BinarySearchTree<Int>()
-                        tree.insert(15)
-                        tree.insert(6)
-                        tree.insert(18)
-                        tree.insert(3)
-                        tree.insert(7)
-                        tree.insert(17)
-                        tree.insert(20)
+                        tree.insert(value: 15)
+                        tree.insert(value: 6)
+                        tree.insert(value: 18)
+                        tree.insert(value: 3)
+                        tree.insert(value: 7)
+                        tree.insert(value: 17)
+                        tree.insert(value: 20)
                     }
                     
                     it("returns the node") {
-                        expect(tree.search(7)).to(beIdenticalTo(tree.root?.left?.right))
+                        expect(tree.search(value: 7)).to(beIdenticalTo(tree.root?.left?.right))
                     }
                 }
 
@@ -86,27 +86,27 @@ class BinarySearchTreeSpec: QuickSpec {
                 
                 beforeEach {
                     tree = BinarySearchTree<Int>()
-                    tree.insert(7)
-                    tree.insert(2)
-                    tree.insert(10)
-                    tree.insert(1)
-                    tree.insert(5)
-                    tree.insert(9)
+                    tree.insert(value: 7)
+                    tree.insert(value: 2)
+                    tree.insert(value: 10)
+                    tree.insert(value: 1)
+                    tree.insert(value: 5)
+                    tree.insert(value: 9)
                 }
                 
                 it("decreases the count of nodes") {
-                    tree.remove(9)
+                    tree.remove(value: 9)
                     expect(tree.count).to(equal(5))
                 }
                 
                 context("when the node to be removed is a leaf node") {
                     
                     beforeEach {
-                        tree.remove(5)
+                        tree.remove(value: 5)
                     }
                     
                     it("removes the leaf node") {
-                        expect(tree.search(2)?.right).to(beNil())
+                        expect(tree.search(value: 2)?.right).to(beNil())
                     }
                 
                 }
@@ -114,12 +114,12 @@ class BinarySearchTreeSpec: QuickSpec {
                 context("when the node to be removed has only one child") {
                     
                     beforeEach {
-                        tree.remove(10)
+                        tree.remove(value: 10)
                     }
                     
                     it("links that child to the parent node") {
-                        let parent = tree.search(7)!
-                        let child = tree.search(9)!
+                        let parent = tree.search(value: 7)!
+                        let child = tree.search(value: 9)!
                         
                         expect(parent.right).to(beIdenticalTo(child))
                         expect(child.parent).to(beIdenticalTo(parent))
@@ -131,13 +131,13 @@ class BinarySearchTreeSpec: QuickSpec {
                 context("when the node to be removed has two children") {
                     
                     beforeEach {
-                        tree.remove(2)
+                        tree.remove(value: 2)
                     }
                     
                     it("replaces this node with the successor") {
-                        let x = tree.search(7)
-                        let y = tree.search(5)
-                        let z = tree.search(1)
+                        let x = tree.search(value: 7)
+                        let y = tree.search(value: 5)
+                        let z = tree.search(value: 1)
                         expect(x?.left).to(beIdenticalTo(y))
                         expect(y?.parent).to(beIdenticalTo(x))
                         expect(y?.left).to(beIdenticalTo(z))
@@ -150,13 +150,13 @@ class BinarySearchTreeSpec: QuickSpec {
                 context("when the node to be removed has two children and is the root") {
                     
                     beforeEach {
-                        tree.remove(7)
+                        tree.remove(value: 7)
                     }
                     
                     it("replaces this node with the successor") {
-                        let x = tree.search(9)
-                        let y = tree.search(10)
-                        let z = tree.search(2)
+                        let x = tree.search(value: 9)
+                        let y = tree.search(value: 10)
+                        let z = tree.search(value: 2)
                         expect(x?.right).to(beIdenticalTo(y))
                         expect(y?.parent).to(beIdenticalTo(x))
                         expect(x?.left).to(beIdenticalTo(z))

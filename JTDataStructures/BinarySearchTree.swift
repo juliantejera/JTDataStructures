@@ -8,15 +8,15 @@
 
 import Foundation
 
-public class BinarySearchTree<T: Comparable> {
+open class BinarySearchTree<T: Comparable> {
     
-    public private(set) var root: BinarySearchTreeNode<T>?
-    public private(set) var count = 0
+    open fileprivate(set) var root: BinarySearchTreeNode<T>?
+    open fileprivate(set) var count = 0
     
-    public func insert(value: T) {
+    open func insert(value: T) {
         
         if let root = root {
-            insert(root, value: value)
+            insert(currentNode: root, value: value)
         } else {
             root = BinarySearchTreeNode(value: value)
         }
@@ -24,17 +24,17 @@ public class BinarySearchTree<T: Comparable> {
         count += 1
     }
     
-    private func insert(currentNode: BinarySearchTreeNode<T>, value: T) {
+    fileprivate func insert(currentNode: BinarySearchTreeNode<T>, value: T) {
         if value < currentNode.value {
             if let left = currentNode.left {
-                insert(left, value: value)
+                insert(currentNode: left, value: value)
             } else {
                 currentNode.left = BinarySearchTreeNode(value: value)
                 currentNode.left?.parent = currentNode
             }
         } else {
             if let right = currentNode.right {
-                insert(right, value: value)
+                insert(currentNode: right, value: value)
             } else {
                 currentNode.right = BinarySearchTreeNode(value: value)
                 currentNode.right?.parent = currentNode
@@ -43,24 +43,26 @@ public class BinarySearchTree<T: Comparable> {
         
     }
     
-    public func search(value: T) -> BinarySearchTreeNode<T>? {
-        return search(root, value: value)
+    open func search(value: T) -> BinarySearchTreeNode<T>? {
+        return search(currentNode: root, value: value)
     }
     
-    private func search(currentNode: BinarySearchTreeNode<T>?, value: T) -> BinarySearchTreeNode<T>? {
-        if currentNode?.value == value || currentNode == nil {
-            return currentNode
-        }
+    fileprivate func search(currentNode: BinarySearchTreeNode<T>?, value: T) -> BinarySearchTreeNode<T>? {
         
-        if value < currentNode?.value {
-            return search(currentNode?.left, value: value)
+        guard let currentNode = currentNode else {
+            return nil
+        }
+        if currentNode.value == value {
+            return currentNode
+        } else if value < currentNode.value {
+            return search(currentNode: currentNode.left, value: value)
         } else {
-            return search(currentNode?.right, value: value)
+            return search(currentNode: currentNode.right, value: value)
         }
     }
     
     
-    private func transplant(node: BinarySearchTreeNode<T>, child: BinarySearchTreeNode<T>?) {
+    fileprivate func transplant(node: BinarySearchTreeNode<T>, child: BinarySearchTreeNode<T>?) {
         if node.isOrphan {
             root = child
         } else if node.isLeftChild {
@@ -72,25 +74,25 @@ public class BinarySearchTree<T: Comparable> {
         child?.parent = node.parent
     }
     
-    public func remove(value: T) {
-        if let node = search(value) {
-            remove(node)
+    open func remove(value: T) {
+        if let node = search(value: value) {
+            remove(node: node)
             count -= 1
         }
     }
     
-    public func remove(node: BinarySearchTreeNode<T>) {
+    open func remove(node: BinarySearchTreeNode<T>) {
         if node.left == nil {
-            transplant(node, child: node.right)
+            transplant(node: node, child: node.right)
         } else if node.right == nil {
-            transplant(node, child: node.left)
+            transplant(node: node, child: node.left)
         } else if let successor = node.right?.minimum {
             if successor.parent !== node {
-                transplant(successor, child: successor.right)
+                transplant(node: successor, child: successor.right)
                 successor.right = node.right
                 successor.right?.parent = successor
             }
-            transplant(node, child: successor)
+            transplant(node: node, child: successor)
             successor.left = node.left
             successor.left?.parent = successor
         }

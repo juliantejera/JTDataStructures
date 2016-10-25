@@ -10,9 +10,9 @@ import Foundation
 
 public struct Queue<T> {
     
-    private var head: Node<T>?
-    private var tail: Node<T>?
-    private(set) var count = 0
+    fileprivate var head: Node<T>?
+    fileprivate var tail: Node<T>?
+    fileprivate(set) var count = 0
     
     public var isEmpty: Bool {
         return head == nil

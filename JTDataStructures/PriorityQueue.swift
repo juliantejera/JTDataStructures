@@ -10,7 +10,7 @@ import Foundation
 
 public struct PriorityQueue<T> {
     
-    private var items = [T]()
+    fileprivate var items = [T]()
     
     public let compare: (T, T) -> Bool
     public var isEmpty: Bool {
@@ -21,7 +21,7 @@ public struct PriorityQueue<T> {
         return items.count
     }
     
-    init(compare: (T, T) -> Bool) {
+    init(compare: @escaping (T, T) -> Bool) {
         self.compare = compare
     }
     
@@ -37,8 +37,8 @@ public struct PriorityQueue<T> {
         
         let value = items.first
         items[0] = items[items.count - 1]
-        items.removeAtIndex(items.count - 1)
-        heapifyOnDequeue(0)
+        items.remove(at: items.count - 1)
+        heapifyOnDequeue(index: 0)
         return value
     }
     
@@ -46,45 +46,45 @@ public struct PriorityQueue<T> {
         return items.first
     }
     
-    private mutating func heapifyOnEnqueue() {
+    fileprivate mutating func heapifyOnEnqueue() {
         
         var i = items.count - 1;
-        while i > 0 && compare(items[i], items[parentIndex(i)])  {
-            swap(&items[i], &items[parentIndex(i)])
-            i = parentIndex(i)
+        while i > 0 && compare(items[i], items[parent(index: i)])  {
+            swap(&items[i], &items[parent(index: i)])
+            i = parent(index: i)
         }
 
     }
     
-    private mutating func heapifyOnDequeue(i: Int) {
+    fileprivate mutating func heapifyOnDequeue(index: Int) {
         
-        let left = leftIndex(i)
-        let right = rightIndex(i)
-        var largest = i
+        let leftIndex = left(index: index)
+        let rightIndex = right(index: index)
+        var largestIndex = index
         
-        if left < items.count && compare(items[left], items[largest]) {
-            largest = left
+        if leftIndex < items.count && compare(items[leftIndex], items[largestIndex]) {
+            largestIndex = leftIndex
         }
         
-        if right < items.count && compare(items[right], items[largest]) {
-            largest = right
+        if rightIndex < items.count && compare(items[rightIndex], items[largestIndex]) {
+            largestIndex = rightIndex
         }
         
-        if largest != i {
-            swap(&items[i], &items[largest])
-            heapifyOnDequeue(largest)
+        if largestIndex != index {
+            swap(&items[index], &items[largestIndex])
+            heapifyOnDequeue(index: largestIndex)
         }
     }
     
-    private func parentIndex(i: Int) -> Int {
-        return (i - 1) >> 1
+    fileprivate func parent(index: Int) -> Int {
+        return (index - 1) >> 1
     }
     
-    private func leftIndex(i: Int) -> Int {
-        return (i << 1) + 1
+    fileprivate func left(index: Int) -> Int {
+        return (index << 1) + 1
     }
     
-    private func rightIndex(i: Int) -> Int {
-        return (i << 1) + 2
+    fileprivate func right(index: Int) -> Int {
+        return (index << 1) + 2
     }
 }

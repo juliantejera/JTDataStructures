@@ -8,14 +8,14 @@
 
 import Foundation
 
-public class BinarySearchTreeNode<T: Comparable> {
+open class BinarySearchTreeNode<T: Comparable> {
     
-    public var value: T
-    public var parent: BinarySearchTreeNode?
-    public var left: BinarySearchTreeNode?
-    public var right: BinarySearchTreeNode?
+    open var value: T
+    open var parent: BinarySearchTreeNode?
+    open var left: BinarySearchTreeNode?
+    open var right: BinarySearchTreeNode?
     
-    public var depth: Int {
+    open var depth: Int {
         var i = 0
         var node = self
         while let parent = node.parent {
@@ -26,23 +26,23 @@ public class BinarySearchTreeNode<T: Comparable> {
         return i
     }
     
-    public var hasChildren: Bool {
+    open var hasChildren: Bool {
         return left != nil || right != nil
     }
     
-    public var isLeftChild: Bool {
+    open var isLeftChild: Bool {
         return parent?.left === self
     }
     
-    public var isRightChild: Bool {
+    open var isRightChild: Bool {
         return parent?.right === self
     }
     
-    public var isOrphan: Bool {
+    open var isOrphan: Bool {
         return parent == nil
     }
     
-    public var minimum: BinarySearchTreeNode<T>? {
+    open var minimum: BinarySearchTreeNode<T>? {
         var currentNode = self
         while let left = currentNode.left {
             currentNode = left
@@ -50,7 +50,7 @@ public class BinarySearchTreeNode<T: Comparable> {
         return currentNode
     }
     
-    public var maximum: BinarySearchTreeNode<T>? {
+    open var maximum: BinarySearchTreeNode<T>? {
         var currentNode = self
         while let right = currentNode.right {
             currentNode = right
@@ -58,26 +58,26 @@ public class BinarySearchTreeNode<T: Comparable> {
         return currentNode
     }
     
-    public var successor: BinarySearchTreeNode<T>? {
+    open var successor: BinarySearchTreeNode<T>? {
         if let right = self.right {
             return right.minimum
         }
         
         var currentNode = self
-        while let parent = currentNode.parent where currentNode.isRightChild {
+        while let parent = currentNode.parent , currentNode.isRightChild {
             currentNode = parent
         }
         
         return currentNode.parent
     }
     
-    public var predecessor: BinarySearchTreeNode<T>? {
+    open var predecessor: BinarySearchTreeNode<T>? {
         if let left = self.left {
             return left.maximum
         }
         
         var currentNode = self
-        while let parent = currentNode.parent where currentNode.isLeftChild {
+        while let parent = currentNode.parent , currentNode.isLeftChild {
             currentNode = parent
         }
         

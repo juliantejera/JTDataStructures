@@ -11,7 +11,7 @@ import Foundation
 
 struct Factory {
     
-    func createBinarySearchTreeNode(value: Int = random()) -> BinarySearchTreeNode<Int> {
+    func createBinarySearchTreeNode(_ value: Int = Int(arc4random())) -> BinarySearchTreeNode<Int> {
         return BinarySearchTreeNode(value: value)
     }
     
