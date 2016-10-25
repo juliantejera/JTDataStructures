@@ -14,6 +14,7 @@
 		B91070F41D40F5130005ED06 /* BinarySearchTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91070F31D40F5130005ED06 /* BinarySearchTreeNode.swift */; };
 		B9127B9E1DBF09120031ED90 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9127B9D1DBF09120031ED90 /* DoublyLinkedList.swift */; };
 		B9127BA01DBF0ED90031ED90 /* DoublyLinkedListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9127B9F1DBF0ED90031ED90 /* DoublyLinkedListSpec.swift */; };
+		B9127BA21DBF1BAF0031ED90 /* DoublyLinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9127BA11DBF1BAF0031ED90 /* DoublyLinkedListNode.swift */; };
 		B9710DE71D33BFB6003EF6A9 /* StackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */; };
 		B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE81D33C160003EF6A9 /* Stack.swift */; };
 		B9710DEB1D347285003EF6A9 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */; };
@@ -48,6 +49,7 @@
 		B91070F31D40F5130005ED06 /* BinarySearchTreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNode.swift; sourceTree = "<group>"; };
 		B9127B9D1DBF09120031ED90 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		B9127B9F1DBF0ED90031ED90 /* DoublyLinkedListSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListSpec.swift; sourceTree = "<group>"; };
+		B9127BA11DBF1BAF0031ED90 /* DoublyLinkedListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListNode.swift; sourceTree = "<group>"; };
 		B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackSpec.swift; sourceTree = "<group>"; };
 		B9710DE81D33C160003EF6A9 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				B97FC15D1D33520000512342 /* Node.swift */,
+				B9127BA11DBF1BAF0031ED90 /* DoublyLinkedListNode.swift */,
 				B9127B9D1DBF09120031ED90 /* DoublyLinkedList.swift */,
 				B97FC15E1D33520000512342 /* Queue.swift */,
 				B9710DE81D33C160003EF6A9 /* Stack.swift */,
@@ -360,6 +363,7 @@
 				B97FC15F1D33520000512342 /* Node.swift in Sources */,
 				B9710DEB1D347285003EF6A9 /* PriorityQueue.swift in Sources */,
 				B9127B9E1DBF09120031ED90 /* DoublyLinkedList.swift in Sources */,
+				B9127BA21DBF1BAF0031ED90 /* DoublyLinkedListNode.swift in Sources */,
 				B91070F21D4075FC0005ED06 /* BinarySearchTree.swift in Sources */,
 				B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */,
 				B97FC1601D33520000512342 /* Queue.swift in Sources */,
