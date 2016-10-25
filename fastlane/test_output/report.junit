@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='JTDataStructuresTests.xctest' tests='45' failures='0'>
+  <testsuite name='JTDataStructuresTests.BinarySearchTreeNodeSpec' tests='15' failures='0'>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__when_the_node_doesn_t_have_a_parent__is_an_orphan' time='0.002'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__when_the_node_has_a_parent__is_not_an_ophan' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__when_the_node_s_parent_left_child_is_this_node__is_the_left_child' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__when_the_node_s_parent_left_child_is_this_node__is_the_right_child' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__depth__is_the_number_of_ancestors' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__minimum__is_the_last_element_of_the_left_children' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__maximum__is_the_last_element_of_the_right_children' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__successor__when_the_right_subtree_of_the_node_is_nonempty__returns_the_minimum_of_the_right_child_of_the_node' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__successor__when_the_right_subtree_of_the_node_is_empty__returns_the_lowest_ancestor_whose_left_child_is_also_an_ancesor_of_the_node' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__predecessor__when_the_left_subtree_of_the_node_is_nonempty__returns_the_maximum_of_the_right_child_of_the_node' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__predecessor__when_the_right_subtree_of_the_node_is_empty__returns_the_lowest_ancestor_whose_right_child_is_also_an_ancesor_of_the_node' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__hasChildren__when_the_left_child_isn_t_nil__returns_true' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__hasChildren__when_the_right_child_isn_t_nil__returns_true' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__hasChildren__when_the_right_and_left_child_are_not_nil__returns_true' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeNodeSpec' name='BinarySearchTreeNode__hasChildren__when_both_children_are_nil__returns_false' time='0.001'/>
+  </testsuite>
+  <testsuite name='JTDataStructuresTests.BinarySearchTreeSpec' tests='9' failures='0'>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeSpec' name='BinarySearchTree__insert__adds_element_in_the_expected_order' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeSpec' name='BinarySearchTree__insert__increases_the_count_of_nodes' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeSpec' name='BinarySearchTree__search__when_the_value_isn_t_in_the_tree__returns_nil' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeSpec' name='BinarySearchTree__search__when_the_value_is_in_the_tree__returns_the_node' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeSpec' name='BinarySearchTree__remove__decreases_the_count_of_nodes' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeSpec' name='BinarySearchTree__remove__when_the_node_to_be_removed_is_a_leaf_node__removes_the_leaf_node' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeSpec' name='BinarySearchTree__remove__when_the_node_to_be_removed_has_only_one_child__links_that_child_to_the_parent_node' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeSpec' name='BinarySearchTree__remove__when_the_node_to_be_removed_has_two_children__replaces_this_node_with_the_successor' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.BinarySearchTreeSpec' name='BinarySearchTree__remove__when_the_node_to_be_removed_has_two_children_and_is_the_root__replaces_this_node_with_the_successor' time='0.001'/>
+  </testsuite>
+  <testsuite name='JTDataStructuresTests.PriorityQueueSpec' tests='9' failures='0'>
+    <testcase classname='JTDataStructuresTests.PriorityQueueSpec' name='PriorityQueue__enqueue__enqueues_the_numbers_in_the_heap' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.PriorityQueueSpec' name='PriorityQueue__dequeue__when_the_priority_queue_is_empty__returns_nil' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.PriorityQueueSpec' name='PriorityQueue__dequeue__when_the_priority_queue_is_not_empty__returns_the_items_in_the_right_order' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.PriorityQueueSpec' name='PriorityQueue__dequeue__when_the_priority_queue_is_not_empty__reduces_the_amount_of_elements' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.PriorityQueueSpec' name='PriorityQueue__peek__when_the_priority_queue_is_empty__returns_nil' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.PriorityQueueSpec' name='PriorityQueue__peek__when_the_priority_queue_is_not_empty__returns_the_first_value_of_the_queue' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.PriorityQueueSpec' name='PriorityQueue__peek__when_the_priority_queue_is_not_empty__does_not_reduce_the_count_of_elements' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.PriorityQueueSpec' name='PriorityQueue__isEmpty__when_the_priorityQueue_doesnt_have_any_items__returns_true' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.PriorityQueueSpec' name='PriorityQueue__isEmpty__when_the_priority_queue_has_items__returns_false' time='0.001'/>
+  </testsuite>
+  <testsuite name='JTDataStructuresTests.QueueSpec' tests='6' failures='0'>
+    <testcase classname='JTDataStructuresTests.QueueSpec' name='Queue__enqueue__adds_the_elements_to_the_queue' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.QueueSpec' name='Queue__dequeue__when_the_queue_isn_t_empty__dequeues_the_elements_in_the_right_order' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.QueueSpec' name='Queue__dequeue__when_the_queue_isn_t_empty__updates_the_count_of_items' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.QueueSpec' name='Queue__dequeue__when_the_queue_is_empty__returns_nil' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.QueueSpec' name='Queue__isEmpty__when_the_queue_doesn_t_have_any_items__returns_true' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.QueueSpec' name='Queue__isEmpty__when_the_queue_has_items__returns_false' time='0.001'/>
+  </testsuite>
+  <testsuite name='JTDataStructuresTests.QuickSorterSpec' tests='1' failures='0'>
+    <testcase classname='JTDataStructuresTests.QuickSorterSpec' name='QuickSorter__sort__orders_the_elements' time='0.001'/>
+  </testsuite>
+  <testsuite name='JTDataStructuresTests.StackSpec' tests='5' failures='0'>
+    <testcase classname='JTDataStructuresTests.StackSpec' name='Stack__push__adds_elements_to_the_stack' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.StackSpec' name='Stack__pop__when_the_stack_is_empty__returns_nil' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.StackSpec' name='Stack__pop__when_the_stack_has_elements__pops_them_in_the_right_order' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.StackSpec' name='Stack__peek__when_its_empty__returns_nil' time='0.001'/>
+    <testcase classname='JTDataStructuresTests.StackSpec' name='Stack__peek__when_it_has_elements__returns_the_one_at_the_top' time='0.001'/>
+  </testsuite>
+</testsuites>
