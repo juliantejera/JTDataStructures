@@ -19,7 +19,6 @@
 		B9710DEF1D3900AF003EF6A9 /* QuickSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DEE1D3900AF003EF6A9 /* QuickSorter.swift */; };
 		B97FC1471D3351E600512342 /* JTDataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = B97FC1461D3351E600512342 /* JTDataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B97FC14E1D3351E600512342 /* JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97FC1431D3351E600512342 /* JTDataStructures.framework */; };
-		B97FC1531D3351E600512342 /* JTDataStructuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC1521D3351E600512342 /* JTDataStructuresTests.swift */; };
 		B97FC15F1D33520000512342 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC15D1D33520000512342 /* Node.swift */; };
 		B97FC1601D33520000512342 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC15E1D33520000512342 /* Queue.swift */; };
 		B97FC1621D33546F00512342 /* QueueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97FC1611D33546F00512342 /* QueueSpec.swift */; };
@@ -54,7 +53,6 @@
 		B97FC1461D3351E600512342 /* JTDataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTDataStructures.h; sourceTree = "<group>"; };
 		B97FC1481D3351E600512342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B97FC14D1D3351E600512342 /* JTDataStructuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JTDataStructuresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B97FC1521D3351E600512342 /* JTDataStructuresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDataStructuresTests.swift; sourceTree = "<group>"; };
 		B97FC1541D3351E600512342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B97FC15D1D33520000512342 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		B97FC15E1D33520000512342 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 		B97FC1511D3351E600512342 /* JTDataStructuresTests */ = {
 			isa = PBXGroup;
 			children = (
-				B97FC1521D3351E600512342 /* JTDataStructuresTests.swift */,
 				B98F546B1D4AFA1300B6FFAB /* Factory.swift */,
 				B9710DEC1D3478B1003EF6A9 /* PriorityQueueSpec.swift */,
 				B97FC1611D33546F00512342 /* QueueSpec.swift */,
@@ -372,7 +369,6 @@
 				B91070F01D3FA2910005ED06 /* QuickSorterSpec.swift in Sources */,
 				B98F546E1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift in Sources */,
 				B97FC1621D33546F00512342 /* QueueSpec.swift in Sources */,
-				B97FC1531D3351E600512342 /* JTDataStructuresTests.swift in Sources */,
 				B9710DE71D33BFB6003EF6A9 /* StackSpec.swift in Sources */,
 				B98F546C1D4AFA1300B6FFAB /* Factory.swift in Sources */,
 			);
