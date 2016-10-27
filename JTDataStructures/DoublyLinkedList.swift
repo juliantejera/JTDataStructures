@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class DoublyLinkedList<T: Equatable> {
+open class DoublyLinkedList<T>: Sequence {
     
     var first: DoublyLinkedListNode<T>?
     var last: DoublyLinkedListNode<T>?
@@ -25,20 +25,6 @@ open class DoublyLinkedList<T: Equatable> {
         }
     }
     
-    // O(n)
-    open func search(value: T) -> DoublyLinkedListNode<T>? {
-        return first?.search(value: value)
-    }
-    
-    // O(n)
-    open func remove(value: T) {
-        guard let node = search(value: value) else {
-            return
-        }
-        
-        remove(node: node)
-    }
-    
     // O(1)
     open func remove(node: DoublyLinkedListNode<T>) {
         if node === first {
@@ -51,6 +37,27 @@ open class DoublyLinkedList<T: Equatable> {
         
         node.previous?.next = node.next
         node.next?.previous = node.previous
-        
+    }
+    
+    // MARK: - Sequence
+    open func makeIterator() -> DoublyLinkedListIterator<T> {
+        return DoublyLinkedListIterator(list: self)
+    }
+}
+
+
+public struct DoublyLinkedListIterator<T>: IteratorProtocol {
+    
+    let list: DoublyLinkedList<T>
+    var currentNode: DoublyLinkedListNode<T>?
+    
+    public init(list: DoublyLinkedList<T>) {
+        self.list = list
+        self.currentNode = list.first
+    }
+    
+    public mutating func next() -> DoublyLinkedListNode<T>? {
+        currentNode = currentNode?.next
+        return currentNode
     }
 }

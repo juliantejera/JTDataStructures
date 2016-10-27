@@ -28,6 +28,7 @@
 		B98F546A1D4AF91400B6FFAB /* BinarySearchTreeNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F54691D4AF91400B6FFAB /* BinarySearchTreeNodeSpec.swift */; };
 		B98F546C1D4AFA1300B6FFAB /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F546B1D4AFA1300B6FFAB /* Factory.swift */; };
 		B98F546E1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98F546D1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift */; };
+		B99F49D61DC19DFC00FD055A /* HashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F49D51DC19DFC00FD055A /* HashMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		B98F54691D4AF91400B6FFAB /* BinarySearchTreeNodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNodeSpec.swift; sourceTree = "<group>"; };
 		B98F546B1D4AFA1300B6FFAB /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		B98F546D1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeSpec.swift; sourceTree = "<group>"; };
+		B99F49D51DC19DFC00FD055A /* HashMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashMap.swift; sourceTree = "<group>"; };
 		F52F485FCB0DA487DA6C6735 /* Pods_JTDataStructuresTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTDataStructuresTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBA75547D13F117614436522 /* Pods-JTDataStructuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructuresTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD41B9F431F9E71C40B9FA35 /* Pods-JTDataStructuresTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructuresTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				B9710DEE1D3900AF003EF6A9 /* QuickSorter.swift */,
 				B91070F11D4075FC0005ED06 /* BinarySearchTree.swift */,
 				B91070F31D40F5130005ED06 /* BinarySearchTreeNode.swift */,
+				B99F49D51DC19DFC00FD055A /* HashMap.swift */,
 				B97FC1461D3351E600512342 /* JTDataStructures.h */,
 				B97FC1481D3351E600512342 /* Info.plist */,
 			);
@@ -363,6 +366,7 @@
 				B97FC15F1D33520000512342 /* Node.swift in Sources */,
 				B9710DEB1D347285003EF6A9 /* PriorityQueue.swift in Sources */,
 				B9127B9E1DBF09120031ED90 /* DoublyLinkedList.swift in Sources */,
+				B99F49D61DC19DFC00FD055A /* HashMap.swift in Sources */,
 				B9127BA21DBF1BAF0031ED90 /* DoublyLinkedListNode.swift in Sources */,
 				B91070F21D4075FC0005ED06 /* BinarySearchTree.swift in Sources */,
 				B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */,
