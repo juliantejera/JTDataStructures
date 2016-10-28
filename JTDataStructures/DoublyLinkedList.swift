@@ -48,8 +48,8 @@ open class DoublyLinkedList<T>: Sequence {
 
 public struct DoublyLinkedListIterator<T>: IteratorProtocol {
     
-    let list: DoublyLinkedList<T>
-    var currentNode: DoublyLinkedListNode<T>?
+    private let list: DoublyLinkedList<T>
+    private var currentNode: DoublyLinkedListNode<T>?
     
     public init(list: DoublyLinkedList<T>) {
         self.list = list
@@ -57,7 +57,8 @@ public struct DoublyLinkedListIterator<T>: IteratorProtocol {
     }
     
     public mutating func next() -> DoublyLinkedListNode<T>? {
+        let node = currentNode
         currentNode = currentNode?.next
-        return currentNode
+        return node
     }
 }
