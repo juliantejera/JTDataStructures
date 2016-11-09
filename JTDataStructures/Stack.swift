@@ -8,27 +8,27 @@
 
 import Foundation
 
-open class Stack<T> {
+public struct Stack<T> {
     
     fileprivate var top: Node<T>?
     
-    open var isEmpty: Bool {
+    public var isEmpty: Bool {
         return top == nil
     }
     
-    open func push(value: T) {
+    public mutating func push(value: T) {
         let node = Node(value: value)
         node.next = top
         top = node
     }
     
-    open func pop() -> T? {
+    public mutating func pop() -> T? {
         let value = top?.value
         top = top?.next
         return value
     }
     
-    open func peek() -> T? {
+    public func peek() -> T? {
         return top?.value
     }
     

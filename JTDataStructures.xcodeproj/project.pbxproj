@@ -15,6 +15,7 @@
 		B9127B9E1DBF09120031ED90 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9127B9D1DBF09120031ED90 /* DoublyLinkedList.swift */; };
 		B9127BA01DBF0ED90031ED90 /* DoublyLinkedListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9127B9F1DBF0ED90031ED90 /* DoublyLinkedListSpec.swift */; };
 		B9127BA21DBF1BAF0031ED90 /* DoublyLinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9127BA11DBF1BAF0031ED90 /* DoublyLinkedListNode.swift */; };
+		B9455E981DD2D16F0085BA86 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9455E971DD2D16F0085BA86 /* Graph.swift */; };
 		B9710DE71D33BFB6003EF6A9 /* StackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */; };
 		B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE81D33C160003EF6A9 /* Stack.swift */; };
 		B9710DEB1D347285003EF6A9 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */; };
@@ -50,6 +51,7 @@
 		B9127B9D1DBF09120031ED90 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 		B9127B9F1DBF0ED90031ED90 /* DoublyLinkedListSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListSpec.swift; sourceTree = "<group>"; };
 		B9127BA11DBF1BAF0031ED90 /* DoublyLinkedListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListNode.swift; sourceTree = "<group>"; };
+		B9455E971DD2D16F0085BA86 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackSpec.swift; sourceTree = "<group>"; };
 		B9710DE81D33C160003EF6A9 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				B9710DEE1D3900AF003EF6A9 /* QuickSorter.swift */,
 				B91070F11D4075FC0005ED06 /* BinarySearchTree.swift */,
 				B91070F31D40F5130005ED06 /* BinarySearchTreeNode.swift */,
+				B9455E971DD2D16F0085BA86 /* Graph.swift */,
 				B97FC1461D3351E600512342 /* JTDataStructures.h */,
 				B97FC1481D3351E600512342 /* Info.plist */,
 			);
@@ -363,6 +366,7 @@
 				B97FC15F1D33520000512342 /* Node.swift in Sources */,
 				B9710DEB1D347285003EF6A9 /* PriorityQueue.swift in Sources */,
 				B9127B9E1DBF09120031ED90 /* DoublyLinkedList.swift in Sources */,
+				B9455E981DD2D16F0085BA86 /* Graph.swift in Sources */,
 				B9127BA21DBF1BAF0031ED90 /* DoublyLinkedListNode.swift in Sources */,
 				B91070F21D4075FC0005ED06 /* BinarySearchTree.swift in Sources */,
 				B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */,
