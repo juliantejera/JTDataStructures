@@ -121,7 +121,7 @@ struct Graph<T: Equatable> {
     // Only works for non-negative weights
     func dijkstraShortestPath(source: Vertex<T>) {
         var queue = PriorityQueue<Vertex<T>> { (u, v) -> Bool in
-            return v.distance < u.distance
+            return u.distance < v.distance
         }
         source.distance = 0
         for vertex in vertices {

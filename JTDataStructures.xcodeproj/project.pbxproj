@@ -19,6 +19,7 @@
 		B9455E9A1DD6B4840085BA86 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9455E991DD6B4840085BA86 /* Vertex.swift */; };
 		B9455E9C1DD6B4930085BA86 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9455E9B1DD6B4930085BA86 /* Edge.swift */; };
 		B9455E9E1DD6B4EA0085BA86 /* GraphSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9455E9D1DD6B4EA0085BA86 /* GraphSpec.swift */; };
+		B9455EA01DD7718E0085BA86 /* EdgeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9455E9F1DD7718E0085BA86 /* EdgeSpec.swift */; };
 		B9710DE71D33BFB6003EF6A9 /* StackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */; };
 		B9710DE91D33C160003EF6A9 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DE81D33C160003EF6A9 /* Stack.swift */; };
 		B9710DEB1D347285003EF6A9 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */; };
@@ -58,6 +59,7 @@
 		B9455E991DD6B4840085BA86 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
 		B9455E9B1DD6B4930085BA86 /* Edge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 		B9455E9D1DD6B4EA0085BA86 /* GraphSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphSpec.swift; sourceTree = "<group>"; };
+		B9455E9F1DD7718E0085BA86 /* EdgeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeSpec.swift; sourceTree = "<group>"; };
 		B9710DE61D33BFB6003EF6A9 /* StackSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackSpec.swift; sourceTree = "<group>"; };
 		B9710DE81D33C160003EF6A9 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		B9710DEA1D347285003EF6A9 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				B98F54691D4AF91400B6FFAB /* BinarySearchTreeNodeSpec.swift */,
 				B98F546D1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift */,
 				B9455E9D1DD6B4EA0085BA86 /* GraphSpec.swift */,
+				B9455E9F1DD7718E0085BA86 /* EdgeSpec.swift */,
 			);
 			path = JTDataStructuresTests;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				B98F546A1D4AF91400B6FFAB /* BinarySearchTreeNodeSpec.swift in Sources */,
 				B9127BA01DBF0ED90031ED90 /* DoublyLinkedListSpec.swift in Sources */,
 				B91070F01D3FA2910005ED06 /* QuickSorterSpec.swift in Sources */,
+				B9455EA01DD7718E0085BA86 /* EdgeSpec.swift in Sources */,
 				B98F546E1D4AFE1E00B6FFAB /* BinarySearchTreeSpec.swift in Sources */,
 				B97FC1621D33546F00512342 /* QueueSpec.swift in Sources */,
 				B9710DE71D33BFB6003EF6A9 /* StackSpec.swift in Sources */,

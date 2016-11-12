@@ -14,10 +14,10 @@ class Edge<T: Equatable> {
     var destination: Vertex<T>
     var weight: Int
     
-    init(source: Vertex<T>, destination: Vertex<T>) {
+    init(source: Vertex<T>, destination: Vertex<T>, weight: Int = 0) {
         self.source = source
         self.destination = destination
-        self.weight = 0
+        self.weight = weight
     }
     
     var isRelaxed: Bool {
