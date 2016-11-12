@@ -46,5 +46,5 @@ public struct Queue<T> {
         count -= 1
         return value
     }
-
+    
 }
