@@ -93,17 +93,21 @@ struct Graph<T: Equatable> {
     // Returns true if there aren't any cycles
     // Supports negative weights
     // O(VE)
-    func bellmanFordShortestPath(source: Vertex<T>) -> Bool {
-        edges.forEach { $0.relax() }
-        for edge in edges {
-            if !edge.isRelaxed {
-                return false
-            }
-        }
-        
-        return true
-    }
-    
+//    func bellmanFordShortestPath(source: Vertex<T>) -> Bool {
+//        initializeSingleSource(source: source)
+//        for vertex in vertices {
+//            for edge in edges(vertex: vertex) {
+//                edge.relax()
+//            }
+//        }
+//        for edge in edges {
+//            if !edge.isRelaxed {
+//                return false
+//            }
+//        }
+//        
+//        return true
+//    }
     
     // Only works for directed acyclic graphs
     // O(V + E)
@@ -120,25 +124,20 @@ struct Graph<T: Equatable> {
     
     // Only works for non-negative weights
     func dijkstraShortestPath(source: Vertex<T>) {
+        
+        initializeSingleSource(source: source)
         var queue = PriorityQueue<Vertex<T>> { (u, v) -> Bool in
             return u.distance < v.distance
         }
-        source.distance = 0
-        for vertex in vertices {
-            if vertex !== source {
-                vertex.distance = Int.max
-                vertex.parent = nil
-            }
-            queue.enqueue(value: vertex)
-        }
-        
+        queue.enqueue(value: source)
         while !queue.isEmpty {
-            guard let vertex = queue.dequeue() else {
-                continue
-            }
-            
-            for edge in edges(vertex: vertex) {
-                edge.relax()
+            if let vertex = queue.dequeue() {
+                for edge in edges(vertex: vertex) {
+                    if !edge.isRelaxed {
+                        edge.relax()
+                        queue.enqueue(value: edge.destination)
+                    }
+                }
             }
         }
         

@@ -182,7 +182,7 @@ class GraphSpec: QuickSpec {
                 }
                 
                 
-                context("vertex 1") {
+                describe("vertex 1") {
                     
                     it("sets the correct distance") {
                         expect(graph.vertices[0].distance).to(equal(0))
@@ -194,7 +194,7 @@ class GraphSpec: QuickSpec {
                     
                 }
                 
-                context("vertex 2") {
+                describe("vertex 2") {
                     it("sets the correct distance") {
                         expect(graph.vertices[1].distance).to(equal(1))
                     }
@@ -204,7 +204,7 @@ class GraphSpec: QuickSpec {
                     }
                 }
                 
-                context("vertex 3") {
+                describe("vertex 3") {
                     it("sets the correct distance") {
                         expect(graph.vertices[2].distance).to(equal(1))
                     }
@@ -214,7 +214,7 @@ class GraphSpec: QuickSpec {
                     }
                 }
                 
-                context("vertex 4") {
+                describe("vertex 4") {
                     it("sets the correct distance") {
                         expect(graph.vertices[3].distance).to(equal(2))
                     }
@@ -224,7 +224,7 @@ class GraphSpec: QuickSpec {
                     }
                 }
                 
-                context("vertex 5") {
+                describe("vertex 5") {
                     it("sets the correct distance") {
                         expect(graph.vertices[4].distance).to(equal(1))
                     }
@@ -234,6 +234,175 @@ class GraphSpec: QuickSpec {
                     }
                 }
                 
+            }
+            
+            
+            describe("Shortest Path Algorithms") {
+                var airportsGraph: Graph<String>!
+                var jfk: Vertex<String>!
+                var sfo: Vertex<String>!
+                var lga: Vertex<String>!
+                var sdq: Vertex<String>!
+                var atl: Vertex<String>!
+                var mia: Vertex<String>!
+                
+                beforeEach {
+                    airportsGraph = Graph<String>()
+                    jfk = Vertex(value: "JFK")
+                    sfo = Vertex(value: "SFO")
+                    lga = Vertex(value: "LGA")
+                    sdq = Vertex(value: "SDQ")
+                    atl = Vertex(value: "ATL")
+                    mia = Vertex(value: "MIA")
+                    
+                    airportsGraph.insert(vertex: mia)
+                    airportsGraph.insert(vertex: jfk)
+                    airportsGraph.insert(vertex: sfo)
+                    airportsGraph.insert(vertex: lga)
+                    airportsGraph.insert(vertex: sdq)
+                    airportsGraph.insert(vertex: atl)
+                    airportsGraph.insert(edge: Edge(source: jfk, destination: sfo, weight: 400))
+                    airportsGraph.insert(edge: Edge(source: jfk, destination: mia, weight: 300))
+                    airportsGraph.insert(edge: Edge(source: jfk, destination: sdq, weight: 500))
+                    airportsGraph.insert(edge: Edge(source: mia, destination: atl, weight: 100))
+                    airportsGraph.insert(edge: Edge(source: atl, destination: jfk, weight: 150))
+                    airportsGraph.insert(edge: Edge(source: sdq, destination: mia, weight: 200))
+                }
+                
+                describe("Dijkstra") {
+                    beforeEach {
+                        airportsGraph.dijkstraShortestPath(source: mia)
+                    }
+                    
+                    describe("jfk") {
+                        
+                        it("has the correct distance") {
+                            expect(jfk.distance).to(equal(250))
+                        }
+                        
+                        it("has the correct parent") {
+                            expect(jfk.parent).to(beIdenticalTo(atl))
+                        }
+                        
+                    }
+                    
+                    describe("atl") {
+                        
+                        it("has the correct distance") {
+                            expect(atl.distance).to(equal(100))
+                        }
+                        
+                        it("has the correct parent") {
+                            expect(atl.parent).to(beIdenticalTo(mia))
+                        }
+                        
+                    }
+                    
+                    describe("sfo") {
+                        
+                        it("has the correct distance") {
+                            expect(sfo.distance).to(equal(650))
+                        }
+                        
+                        it("has the correct parent") {
+                            expect(sfo.parent).to(beIdenticalTo(jfk))
+                        }
+                        
+                    }
+                    
+                    describe("sdq") {
+                        
+                        it("has the correct distance") {
+                            expect(sdq.distance).to(equal(750))
+                        }
+                        
+                        it("has the correct parent") {
+                            expect(sdq.parent).to(beIdenticalTo(jfk))
+                        }
+                        
+                    }
+                    
+                    describe("mia") {
+                        
+                        it("has the correct distance") {
+                            expect(mia.distance).to(equal(0))
+                        }
+                        
+                        it("has the correct parent") {
+                            expect(mia.parent).to(beNil())
+                        }
+                        
+                    }
+
+                }
+                
+                describe("DAG Shortest Path") {
+                    
+                    beforeEach {
+                        airportsGraph.dagShortestPath(source: mia)
+                    }
+                    
+                    describe("jfk") {
+                        
+                        it("has the correct distance") {
+                            expect(jfk.distance).to(equal(250))
+                        }
+                        
+                        it("has the correct parent") {
+                            expect(jfk.parent).to(beIdenticalTo(atl))
+                        }
+                        
+                    }
+                    
+                    describe("atl") {
+                        
+                        it("has the correct distance") {
+                            expect(atl.distance).to(equal(100))
+                        }
+                        
+                        it("has the correct parent") {
+                            expect(atl.parent).to(beIdenticalTo(mia))
+                        }
+                        
+                    }
+                    
+                    describe("sfo") {
+                        
+                        it("has the correct distance") {
+                            expect(sfo.distance).to(equal(650))
+                        }
+                        
+                        it("has the correct parent") {
+                            expect(sfo.parent).to(beIdenticalTo(jfk))
+                        }
+                        
+                    }
+                    
+                    describe("sdq") {
+                        
+                        it("has the correct distance") {
+                            expect(sdq.distance).to(equal(750))
+                        }
+                        
+                        it("has the correct parent") {
+                            expect(sdq.parent).to(beIdenticalTo(jfk))
+                        }
+                        
+                    }
+                    
+                    describe("mia") {
+                        
+                        it("has the correct distance") {
+                            expect(mia.distance).to(equal(0))
+                        }
+                        
+                        it("has the correct parent") {
+                            expect(mia.parent).to(beNil())
+                        }
+                        
+                    }
+                    
+                }
             }
         }
     }

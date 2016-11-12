@@ -25,7 +25,7 @@ class Edge<T: Equatable> {
     }
     
     func relax() {
-        if !isRelaxed {
+        if destination.distance > source.distance + weight {
             destination.distance = source.distance + weight
             destination.parent = source
         }
