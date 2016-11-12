@@ -12,9 +12,9 @@ class Edge<T: Equatable> {
     
     let source: Vertex<T>
     var destination: Vertex<T>
-    var weight: Int
+    var weight: Double
     
-    init(source: Vertex<T>, destination: Vertex<T>, weight: Int = 0) {
+    init(source: Vertex<T>, destination: Vertex<T>, weight: Double = 0) {
         self.source = source
         self.destination = destination
         self.weight = weight

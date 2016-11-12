@@ -35,7 +35,7 @@ struct Graph<T: Equatable> {
         while !queue.isEmpty {
             if let vertex = queue.dequeue() {
                 for edge in edges(vertex: vertex) {
-                    if edge.destination.distance == Int.max {
+                    if edge.destination.distance == Double.infinity {
                         edge.destination.distance = vertex.distance + 1
                         edge.destination.parent = vertex
                         queue.enqueue(value: edge.destination)
@@ -55,7 +55,7 @@ struct Graph<T: Equatable> {
         while !stack.isEmpty {
             if let vertex = stack.pop() {
                 for edge in edges(vertex: vertex) {
-                    if edge.destination.distance == Int.max {
+                    if edge.destination.distance == Double.infinity {
                         edge.destination.distance = vertex.distance + 1
                         edge.destination.parent = vertex
                         stack.push(value: edge.destination)
@@ -76,7 +76,7 @@ struct Graph<T: Equatable> {
         while !stack.isEmpty {
             if let vertex = stack.pop()  {
                 for edge in edges(vertex: vertex) {
-                    if edge.destination.distance == Int.max {
+                    if edge.destination.distance == Double.infinity {
                         edge.destination.distance = vertex.distance + 1
                         edge.destination.parent = vertex
                         stack.push(value: edge.destination)
@@ -145,7 +145,7 @@ struct Graph<T: Equatable> {
     
     private func initializeSingleSource(source: Vertex<T>) {
         for vertex in vertices {
-            vertex.distance = Int.max
+            vertex.distance = Double.infinity
             vertex.parent = nil
         }
         source.distance = 0

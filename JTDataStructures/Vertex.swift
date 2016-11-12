@@ -11,7 +11,7 @@ import Foundation
 class Vertex<T> {
     let value: T
     var parent: Vertex<T>?
-    var distance: Int
+    var distance: Double
     
     init(value: T) {
         self.value = value
