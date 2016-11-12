@@ -8,26 +8,25 @@
 
 import Foundation
 
-struct Graph<T: Equatable> {
+public struct Graph<T: Equatable> {
     
     private(set) var vertices = [Vertex<T>]()
     private(set) var edges = [Edge<T>]()
     
-    mutating func insert(vertex: Vertex<T>) {
+    public mutating func insert(vertex: Vertex<T>) {
         vertices.append(vertex)
     }
     
-    mutating func insert(edge: Edge<T>) {
+    public mutating func insert(edge: Edge<T>) {
         edges.append(edge)
     }
     
-    func edges(vertex: Vertex<T>) -> [Edge<T>] {
+    public func edges(vertex: Vertex<T>) -> [Edge<T>] {
         return edges.filter { $0.source.value == vertex.value }
     }
     
-    
     // O(V + E)
-    func breathFirstSearch(source: Vertex<T>) {
+    public func breathFirstSearch(source: Vertex<T>) {
         initializeSingleSource(source: source)
         var queue = Queue<Vertex<T>>()
         queue.enqueue(value: source)
@@ -47,7 +46,7 @@ struct Graph<T: Equatable> {
     }
     
     // O(V + E)
-    func depthFirstSearch(source: Vertex<T>) {
+    public func depthFirstSearch(source: Vertex<T>) {
         initializeSingleSource(source: source)
         var stack = Stack<Vertex<T>>()
         stack.push(value: source)
@@ -65,9 +64,8 @@ struct Graph<T: Equatable> {
         }
     }
     
-    
     // O(V + E)
-    func topologicalSort(source: Vertex<T>) -> [Vertex<T>] {
+    public func topologicalSort(source: Vertex<T>) -> [Vertex<T>] {
         initializeSingleSource(source: source)
         var stack = Stack<Vertex<T>>()
         stack.push(value: source)
@@ -92,26 +90,28 @@ struct Graph<T: Equatable> {
     
     // Returns true if there aren't any cycles
     // Supports negative weights
-    // O(VE)
-//    func bellmanFordShortestPath(source: Vertex<T>) -> Bool {
-//        initializeSingleSource(source: source)
-//        for vertex in vertices {
-//            for edge in edges(vertex: vertex) {
-//                edge.relax()
-//            }
-//        }
-//        for edge in edges {
-//            if !edge.isRelaxed {
-//                return false
-//            }
-//        }
-//        
-//        return true
-//    }
+    // O(V * E)
+    public func bellmanFordShortestPath(source: Vertex<T>) -> Bool {
+        initializeSingleSource(source: source)
+        
+        for _ in 1..<vertices.count {
+            edges.forEach {
+                $0.relax()
+            }
+        }
+
+        for edge in edges {
+            if !edge.isRelaxed {
+                return false
+            }
+        }
+        
+        return true
+    }
     
     // Only works for directed acyclic graphs
     // O(V + E)
-    func dagShortestPath(source: Vertex<T>) {
+    public func dagShortestPath(source: Vertex<T>) {
         let topologicallySortedVertices = self.topologicalSort(source: source)
         initializeSingleSource(source: source)
         for vertex in topologicallySortedVertices {
@@ -123,7 +123,7 @@ struct Graph<T: Equatable> {
     
     
     // Only works for non-negative weights
-    func dijkstraShortestPath(source: Vertex<T>) {
+    public func dijkstraShortestPath(source: Vertex<T>) {
         
         initializeSingleSource(source: source)
         var queue = PriorityQueue<Vertex<T>> { (u, v) -> Bool in

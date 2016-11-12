@@ -8,23 +8,23 @@
 
 import Foundation
 
-class Edge<T: Equatable> {
+public class Edge<T: Equatable> {
     
-    let source: Vertex<T>
-    var destination: Vertex<T>
-    var weight: Double
+    public let source: Vertex<T>
+    public let destination: Vertex<T>
+    public var weight: Double
     
-    init(source: Vertex<T>, destination: Vertex<T>, weight: Double = 0) {
+    public init(source: Vertex<T>, destination: Vertex<T>, weight: Double = 0) {
         self.source = source
         self.destination = destination
         self.weight = weight
     }
     
-    var isRelaxed: Bool {
-        return destination.distance < source.distance + weight
+    public var isRelaxed: Bool {
+        return destination.distance <= source.distance + weight
     }
     
-    func relax() {
+    public func relax() {
         if destination.distance > source.distance + weight {
             destination.distance = source.distance + weight
             destination.parent = source

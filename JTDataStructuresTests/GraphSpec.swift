@@ -403,6 +403,96 @@ class GraphSpec: QuickSpec {
                     }
                     
                 }
+                
+                describe("Bellman-Ford Shortest Path") {
+                    
+                    var result: Bool!
+                    
+                    context("when there are negative weight cycles") {
+                        beforeEach {
+                            airportsGraph.insert(edge: Edge(source: jfk, destination: jfk, weight: -1000))
+                            result = airportsGraph.bellmanFordShortestPath(source: mia)
+                        }
+
+                        it("returns false") {
+                            expect(result).to(beFalse())
+                        }
+                        
+                    }
+                    
+                    context("when there aren't cycles") {
+                        beforeEach {
+                            result = airportsGraph.bellmanFordShortestPath(source: mia)
+                        }
+                        
+                        it("returns true") {
+                            expect(result).to(beTrue())
+                        }
+                        
+                        describe("jfk") {
+                            
+                            it("has the correct distance") {
+                                expect(jfk.distance).to(equal(250))
+                            }
+                            
+                            it("has the correct parent") {
+                                expect(jfk.parent).to(beIdenticalTo(atl))
+                            }
+                            
+                        }
+                        
+                        describe("atl") {
+                            
+                            it("has the correct distance") {
+                                expect(atl.distance).to(equal(100))
+                            }
+                            
+                            it("has the correct parent") {
+                                expect(atl.parent).to(beIdenticalTo(mia))
+                            }
+                            
+                        }
+                        
+                        describe("sfo") {
+                            
+                            it("has the correct distance") {
+                                expect(sfo.distance).to(equal(650))
+                            }
+                            
+                            it("has the correct parent") {
+                                expect(sfo.parent).to(beIdenticalTo(jfk))
+                            }
+                            
+                        }
+                        
+                        describe("sdq") {
+                            
+                            it("has the correct distance") {
+                                expect(sdq.distance).to(equal(750))
+                            }
+                            
+                            it("has the correct parent") {
+                                expect(sdq.parent).to(beIdenticalTo(jfk))
+                            }
+                            
+                        }
+                        
+                        describe("mia") {
+                            
+                            it("has the correct distance") {
+                                expect(mia.distance).to(equal(0))
+                            }
+                            
+                            it("has the correct parent") {
+                                expect(mia.parent).to(beNil())
+                            }
+                            
+                        }
+
+                    }
+
+
+                }
             }
         }
     }

@@ -8,12 +8,12 @@
 
 import Foundation
 
-class Vertex<T> {
-    let value: T
-    var parent: Vertex<T>?
-    var distance: Double
+public class Vertex<T> {
+    public let value: T
+    public var parent: Vertex<T>?
+    public var distance: Double
     
-    init(value: T) {
+    public init(value: T) {
         self.value = value
         self.parent = nil
         self.distance = 0
