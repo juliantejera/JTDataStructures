@@ -8,7 +8,7 @@
 
 import Foundation
 
-open class DoublyLinkedListNode<T: Equatable> {
+open class DoublyLinkedListNode<T> {
     
     open var value: T
     open var previous: DoublyLinkedListNode<T>?
@@ -21,14 +21,6 @@ open class DoublyLinkedListNode<T: Equatable> {
     open func insert(node: DoublyLinkedListNode<T>) {
         node.previous = self
         self.next = node
-    }
-    
-    open func search(value: T) -> DoublyLinkedListNode<T>? {
-        if self.value == value {
-            return self
-        }
-        
-        return self.next?.search(value: value)
     }
     
 }
