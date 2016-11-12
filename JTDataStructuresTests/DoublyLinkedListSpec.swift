@@ -62,7 +62,9 @@ class DoublyLinkedListSpec: QuickSpec {
                 
                 context("when the value is not in the list") {
                     it("returns nil") {
-                        expect(list.search(value: 100)).to(beNil())
+                        
+                        
+                        expect(list.first(where: { $0.value == 100 })).to(beNil())
                     }
                 }
                 
@@ -75,7 +77,7 @@ class DoublyLinkedListSpec: QuickSpec {
                     }
                     
                     it("returns the correct node") {                        
-                        expect(list.search(value: 3)).to(beIdenticalTo(list.first?.next))
+                        expect(list.first(where: { $0.value == 3 })).to(beIdenticalTo(list.first?.next))
                     }
                 }
 
@@ -89,11 +91,11 @@ class DoublyLinkedListSpec: QuickSpec {
                         list.insert(value: 5)
                         list.insert(value: 3)
                         list.insert(value: 4)
-                        list.remove(value: 5)
+                        list.remove(node: list.first!)
                     }
                     
                     it("has the correct first node") {
-                        expect(list.search(value: 3)).to(beIdenticalTo(list.first))
+                        expect(list.first(where: { $0.value == 3 })).to(beIdenticalTo(list.first))
                     }
                 }
                 
@@ -102,11 +104,11 @@ class DoublyLinkedListSpec: QuickSpec {
                     
                     beforeEach {
                         list.insert(value: 5)
-                        list.remove(value: 5)
+                        list.remove(node: list.first!)
                     }
                     
                     it("has the correct first node") {
-                        expect(list.search(value: 5)).to(beNil())
+                        expect(list.first(where: { $0.value == 5 })).to(beNil())
                     }
                 }
                 
@@ -117,11 +119,11 @@ class DoublyLinkedListSpec: QuickSpec {
                         list.insert(value: 5)
                         list.insert(value: 3)
                         list.insert(value: 4)
-                        list.remove(value: 4)
+                        list.remove(node: list.last!)
                     }
                     
                     it("has the correct last node") {
-                        expect(list.search(value: 3)).to(beIdenticalTo(list.last))
+                        expect(list.first(where: { $0.value == 3 })).to(beIdenticalTo(list.last))
                     }
                     
                 }
@@ -132,32 +134,15 @@ class DoublyLinkedListSpec: QuickSpec {
                         list.insert(value: 5)
                         list.insert(value: 3)
                         list.insert(value: 4)
-                        list.remove(value: 3)
+                        list.remove(node: list.first!.next!)
                     }
                     
                     it("has the correct first node") {
-                        expect(list.search(value: 4)).to(beIdenticalTo(list.first?.next))
-                        expect(list.search(value: 5)).to(beIdenticalTo(list.last?.previous))
-
+                        expect(list.first(where: { $0.value == 4 })).to(beIdenticalTo(list.first?.next))
+                        expect(list.first(where: { $0.value == 5 })).to(beIdenticalTo(list.last?.previous))
                     }
                 }
-                
-                context("when we try to remove an element is not in the list") {
-                    
-                    beforeEach {
-                        list.insert(value: 5)
-                        list.remove(value: 1)
-                    }
-                    
-                    it("has the correct first node") {
-                        expect(list.search(value: 5)).to(beIdenticalTo(list.first))
-                    }
-                    
-                    
-                    it("has the correct last node") {
-                        expect(list.search(value: 5)).to(beIdenticalTo(list.last))
-                    }
-                }
+               
 
                 
             
