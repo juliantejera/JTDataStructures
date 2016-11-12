@@ -8,43 +8,6 @@
 
 import Foundation
 
-class Vertex<T> {
-    let value: T
-    var parent: Vertex<T>?
-    var distance: Int
-    
-    init(value: T) {
-        self.value = value
-        self.parent = nil
-        self.distance = 0
-    }
-}
-
-class Edge<T: Equatable> {
-    let source: Vertex<T>
-    var destination: Vertex<T>
-    var weight: Int
-    
-    init(source: Vertex<T>, destination: Vertex<T>) {
-        self.source = source
-        self.destination = destination
-        self.weight = 0
-    }
-    
-    var isRelaxed: Bool {
-        return !(destination.distance > source.distance + weight)
-    }
-   
-    func relax() {
-        if !isRelaxed {
-            destination.distance = source.distance + weight
-            destination.parent = source
-        }
-    }
-    
-
-}
-
 struct Graph<T: Equatable> {
     
     private(set) var vertices = [Vertex<T>]()
@@ -62,40 +25,41 @@ struct Graph<T: Equatable> {
         return edges.filter { $0.source.value == vertex.value }
     }
     
+    
+    // O(V + E)
     func breathFirstSearch(source: Vertex<T>) {
         initializeSingleSource(source: source)
         var queue = Queue<Vertex<T>>()
         queue.enqueue(value: source)
         
         while !queue.isEmpty {
-            guard let vertex = queue.dequeue() else {
-                continue
-            }
-            for edge in edges(vertex: vertex) {
-                if edge.destination.distance == Int.min {
-                    edge.destination.distance = vertex.distance + 1
-                    edge.destination.parent = vertex
-                    queue.enqueue(value: edge.destination)
+            if let vertex = queue.dequeue() {
+                for edge in edges(vertex: vertex) {
+                    if edge.destination.distance == Int.max {
+                        edge.destination.distance = vertex.distance + 1
+                        edge.destination.parent = vertex
+                        queue.enqueue(value: edge.destination)
+                    }
                 }
             }
         }
+        
     }
     
-    func depthFirstSearch(source: inout Vertex<T>) {
+    // O(V + E)
+    func depthFirstSearch(source: Vertex<T>) {
         initializeSingleSource(source: source)
         var stack = Stack<Vertex<T>>()
         stack.push(value: source)
         
         while !stack.isEmpty {
-            guard let vertex = stack.pop() else {
-                continue
-            }
-            
-            for edge in edges(vertex: vertex) {
-                if edge.destination.distance == Int.min {
-                    edge.destination.distance = vertex.distance + 1
-                    edge.destination.parent = vertex
-                    stack.push(value: edge.destination)
+            if let vertex = stack.pop() {
+                for edge in edges(vertex: vertex) {
+                    if edge.destination.distance == Int.max {
+                        edge.destination.distance = vertex.distance + 1
+                        edge.destination.parent = vertex
+                        stack.push(value: edge.destination)
+                    }
                 }
             }
         }
@@ -110,18 +74,16 @@ struct Graph<T: Equatable> {
         
         var topologicallySortedVertices = [Vertex<T>]()
         while !stack.isEmpty {
-            guard let vertex = stack.pop() else {
-                continue
-            }
-            
-            for edge in edges(vertex: vertex) {
-                if edge.destination.distance == Int.min {
-                    edge.destination.distance = vertex.distance + 1
-                    edge.destination.parent = vertex
-                    stack.push(value: edge.destination)
+            if let vertex = stack.pop()  {
+                for edge in edges(vertex: vertex) {
+                    if edge.destination.distance == Int.max {
+                        edge.destination.distance = vertex.distance + 1
+                        edge.destination.parent = vertex
+                        stack.push(value: edge.destination)
+                    }
                 }
+                topologicallySortedVertices.append(vertex)
             }
-            topologicallySortedVertices.append(vertex)
         }
         
         return topologicallySortedVertices
@@ -182,10 +144,9 @@ struct Graph<T: Equatable> {
         
     }
     
-    
     private func initializeSingleSource(source: Vertex<T>) {
         for vertex in vertices {
-            vertex.distance = Int.min
+            vertex.distance = Int.max
             vertex.parent = nil
         }
         source.distance = 0
