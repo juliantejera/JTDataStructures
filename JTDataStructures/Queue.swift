@@ -47,20 +47,4 @@ public struct Queue<T> {
         return value
     }
     
-    
-    mutating func reverse() {
-        var currentNode = head
-        var previousNode: Node<T>? = nil
-        var nextNode: Node<T>? = nil
-        
-        while(currentNode != nil) {
-            nextNode = currentNode?.next
-            currentNode?.next = previousNode
-            previousNode = currentNode
-            currentNode = nextNode
-        }
-        
-        swap(&head, &tail)
-    }
-
 }
