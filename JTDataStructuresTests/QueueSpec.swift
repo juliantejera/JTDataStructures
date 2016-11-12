@@ -54,8 +54,8 @@ class QueueSpec: QuickSpec {
                     }
                     
                     it("updates the count of items") {
-                        queue.dequeue()
-                        queue.dequeue()
+                        _ = queue.dequeue()
+                        _ = queue.dequeue()
                         expect(queue.count).to(equal(2))
                     }
                     

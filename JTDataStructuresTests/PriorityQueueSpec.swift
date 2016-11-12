@@ -73,7 +73,7 @@ class PriorityQueueSpec: QuickSpec {
                     }
                     
                     it("reduces the amount of elements") {
-                        priorityQueue.dequeue()
+                        _ = priorityQueue.dequeue()
                         expect(priorityQueue.count).to(equal(7))
                     }
                     
@@ -102,7 +102,7 @@ class PriorityQueueSpec: QuickSpec {
                     }
                     
                     it("does not reduce the count of elements") {
-                        priorityQueue.peek()
+                        _ = priorityQueue.peek()
                         expect(priorityQueue.count).to(equal(2))
                     }
                 }
