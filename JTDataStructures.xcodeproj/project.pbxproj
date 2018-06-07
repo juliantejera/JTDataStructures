@@ -7,9 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E49D39699CFA76DBD0CF5DB /* Pods_JTDataStructuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197C4FB8433AC21E5B5317B5 /* Pods_JTDataStructuresTests.framework */; };
+		5F285F63F17C613EE3C4FA35 /* Pods_JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5821D22B6AD3A5D7B4E025 /* Pods_JTDataStructures.framework */; };
 		B9C300F020C8B3DE009FD409 /* JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C300E620C8B3DE009FD409 /* JTDataStructures.framework */; };
-		B9C300F520C8B3DE009FD409 /* JTDataStructuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C300F420C8B3DE009FD409 /* JTDataStructuresTests.swift */; };
 		B9C300F720C8B3DE009FD409 /* JTDataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C300E920C8B3DE009FD409 /* JTDataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9C3010D20C8B461009FD409 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010020C8B45F009FD409 /* PriorityQueue.swift */; };
+		B9C3010E20C8B461009FD409 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010120C8B45F009FD409 /* Vertex.swift */; };
+		B9C3010F20C8B461009FD409 /* HashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010220C8B45F009FD409 /* HashMap.swift */; };
+		B9C3011020C8B461009FD409 /* QuickSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010320C8B45F009FD409 /* QuickSorter.swift */; };
+		B9C3011120C8B461009FD409 /* DoublyLinkedListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010420C8B460009FD409 /* DoublyLinkedListNode.swift */; };
+		B9C3011220C8B461009FD409 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010520C8B460009FD409 /* Node.swift */; };
+		B9C3011320C8B461009FD409 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010620C8B460009FD409 /* Queue.swift */; };
+		B9C3011420C8B461009FD409 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010720C8B460009FD409 /* DoublyLinkedList.swift */; };
+		B9C3011520C8B461009FD409 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010820C8B460009FD409 /* BinarySearchTree.swift */; };
+		B9C3011620C8B461009FD409 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010920C8B460009FD409 /* Edge.swift */; };
+		B9C3011720C8B461009FD409 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010A20C8B460009FD409 /* Stack.swift */; };
+		B9C3011820C8B461009FD409 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010B20C8B460009FD409 /* Graph.swift */; };
+		B9C3011920C8B461009FD409 /* BinarySearchTreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010C20C8B460009FD409 /* BinarySearchTreeNode.swift */; };
+		B9C3012120C9980F009FD409 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3011A20C9980E009FD409 /* Factory.swift */; };
+		B9C3012220C9980F009FD409 /* BinarySearchTreeNodeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3011B20C9980E009FD409 /* BinarySearchTreeNodeSpec.swift */; };
+		B9C3012320C9980F009FD409 /* HashMapSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3011C20C9980E009FD409 /* HashMapSpec.swift */; };
+		B9C3012420C9980F009FD409 /* GraphSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3011D20C9980E009FD409 /* GraphSpec.swift */; };
+		B9C3012520C9980F009FD409 /* DoublyLinkedListSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3011E20C9980E009FD409 /* DoublyLinkedListSpec.swift */; };
+		B9C3012620C9980F009FD409 /* BinarySearchTreeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3011F20C9980E009FD409 /* BinarySearchTreeSpec.swift */; };
+		B9C3012720C9980F009FD409 /* EdgeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3012020C9980E009FD409 /* EdgeSpec.swift */; };
+		B9C3012C20C9981D009FD409 /* StackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3012820C9981D009FD409 /* StackSpec.swift */; };
+		B9C3012D20C9981D009FD409 /* PriorityQueueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3012920C9981D009FD409 /* PriorityQueueSpec.swift */; };
+		B9C3012E20C9981D009FD409 /* QueueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3012A20C9981D009FD409 /* QueueSpec.swift */; };
+		B9C3012F20C9981D009FD409 /* QuickSorterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3012B20C9981D009FD409 /* QuickSorterSpec.swift */; };
+		B9C3014220C9A3CD009FD409 /* DoublyLinkedListIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3014120C9A3CD009FD409 /* DoublyLinkedListIterator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +49,42 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		197C4FB8433AC21E5B5317B5 /* Pods_JTDataStructuresTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTDataStructuresTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F5821D22B6AD3A5D7B4E025 /* Pods_JTDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D2A289E8D3326FD235387B /* Pods-JTDataStructuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructuresTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB2088F4D6A4141D1648C68D /* Pods-JTDataStructures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructures/Pods-JTDataStructures.debug.xcconfig"; sourceTree = "<group>"; };
+		AC524DA1E16D43F330772C5D /* Pods-JTDataStructures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructures.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructures/Pods-JTDataStructures.release.xcconfig"; sourceTree = "<group>"; };
 		B9C300E620C8B3DE009FD409 /* JTDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C300E920C8B3DE009FD409 /* JTDataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTDataStructures.h; sourceTree = "<group>"; };
 		B9C300EA20C8B3DE009FD409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C300EF20C8B3DE009FD409 /* JTDataStructuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JTDataStructuresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9C300F420C8B3DE009FD409 /* JTDataStructuresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDataStructuresTests.swift; sourceTree = "<group>"; };
 		B9C300F620C8B3DE009FD409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9C3010020C8B45F009FD409 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		B9C3010120C8B45F009FD409 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		B9C3010220C8B45F009FD409 /* HashMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashMap.swift; sourceTree = "<group>"; };
+		B9C3010320C8B45F009FD409 /* QuickSorter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSorter.swift; sourceTree = "<group>"; };
+		B9C3010420C8B460009FD409 /* DoublyLinkedListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListNode.swift; sourceTree = "<group>"; };
+		B9C3010520C8B460009FD409 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		B9C3010620C8B460009FD409 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		B9C3010720C8B460009FD409 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
+		B9C3010820C8B460009FD409 /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
+		B9C3010920C8B460009FD409 /* Edge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		B9C3010A20C8B460009FD409 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		B9C3010B20C8B460009FD409 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		B9C3010C20C8B460009FD409 /* BinarySearchTreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNode.swift; sourceTree = "<group>"; };
+		B9C3011A20C9980E009FD409 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		B9C3011B20C9980E009FD409 /* BinarySearchTreeNodeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeNodeSpec.swift; sourceTree = "<group>"; };
+		B9C3011C20C9980E009FD409 /* HashMapSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashMapSpec.swift; sourceTree = "<group>"; };
+		B9C3011D20C9980E009FD409 /* GraphSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphSpec.swift; sourceTree = "<group>"; };
+		B9C3011E20C9980E009FD409 /* DoublyLinkedListSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListSpec.swift; sourceTree = "<group>"; };
+		B9C3011F20C9980E009FD409 /* BinarySearchTreeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeSpec.swift; sourceTree = "<group>"; };
+		B9C3012020C9980E009FD409 /* EdgeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeSpec.swift; sourceTree = "<group>"; };
+		B9C3012820C9981D009FD409 /* StackSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackSpec.swift; sourceTree = "<group>"; };
+		B9C3012920C9981D009FD409 /* PriorityQueueSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueueSpec.swift; sourceTree = "<group>"; };
+		B9C3012A20C9981D009FD409 /* QueueSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueSpec.swift; sourceTree = "<group>"; };
+		B9C3012B20C9981D009FD409 /* QuickSorterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSorterSpec.swift; sourceTree = "<group>"; };
+		B9C3014120C9A3CD009FD409 /* DoublyLinkedListIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListIterator.swift; sourceTree = "<group>"; };
+		BE25F4FD2C6A6305CDF7148B /* Pods-JTDataStructuresTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructuresTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F285F63F17C613EE3C4FA35 /* Pods_JTDataStructures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +101,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C300F020C8B3DE009FD409 /* JTDataStructures.framework in Frameworks */,
+				0E49D39699CFA76DBD0CF5DB /* Pods_JTDataStructuresTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		135ABDB6326E34CF8A37CF27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB2088F4D6A4141D1648C68D /* Pods-JTDataStructures.debug.xcconfig */,
+				AC524DA1E16D43F330772C5D /* Pods-JTDataStructures.release.xcconfig */,
+				BE25F4FD2C6A6305CDF7148B /* Pods-JTDataStructuresTests.debug.xcconfig */,
+				91D2A289E8D3326FD235387B /* Pods-JTDataStructuresTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB7275C5922BCF1576C8CD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F5821D22B6AD3A5D7B4E025 /* Pods_JTDataStructures.framework */,
+				197C4FB8433AC21E5B5317B5 /* Pods_JTDataStructuresTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9C300DC20C8B3DE009FD409 = {
 			isa = PBXGroup;
 			children = (
 				B9C300E820C8B3DE009FD409 /* JTDataStructures */,
 				B9C300F320C8B3DE009FD409 /* JTDataStructuresTests */,
 				B9C300E720C8B3DE009FD409 /* Products */,
+				135ABDB6326E34CF8A37CF27 /* Pods */,
+				7DB7275C5922BCF1576C8CD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +151,16 @@
 		B9C300E820C8B3DE009FD409 /* JTDataStructures */ = {
 			isa = PBXGroup;
 			children = (
-				B9C300E920C8B3DE009FD409 /* JTDataStructures.h */,
+				B9C3013220C99EF8009FD409 /* Graph */,
+				B9C3013720C9A01B009FD409 /* HashMaps */,
 				B9C300EA20C8B3DE009FD409 /* Info.plist */,
+				B9C3013120C99E30009FD409 /* Linked Lists */,
+				B9C3013320C99F39009FD409 /* Queues */,
+				B9C3013420C99F5D009FD409 /* Shared */,
+				B9C3013520C99FBC009FD409 /* Sorting Algorithms */,
+				B9C3013820C9A02F009FD409 /* Stacks */,
+				B9C3013620C99FEB009FD409 /* Supporting Files */,
+				B9C3013020C99DD3009FD409 /* Trees */,
 			);
 			path = JTDataStructures;
 			sourceTree = "<group>";
@@ -80,10 +168,162 @@
 		B9C300F320C8B3DE009FD409 /* JTDataStructuresTests */ = {
 			isa = PBXGroup;
 			children = (
-				B9C300F420C8B3DE009FD409 /* JTDataStructuresTests.swift */,
+				B9C3013C20C9A1FB009FD409 /* Factories */,
+				B9C3013B20C9A08C009FD409 /* Graphs */,
+				B9C3013D20C9A21D009FD409 /* HashMaps */,
 				B9C300F620C8B3DE009FD409 /* Info.plist */,
+				B9C3013A20C9A074009FD409 /* Linked Lists */,
+				B9C3013E20C9A22C009FD409 /* Queues */,
+				B9C3013F20C9A234009FD409 /* Sorting Algorthims */,
+				B9C3014020C9A249009FD409 /* Stacks */,
+				B9C3013920C9A04E009FD409 /* Trees */,
 			);
 			path = JTDataStructuresTests;
+			sourceTree = "<group>";
+		};
+		B9C3013020C99DD3009FD409 /* Trees */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3010820C8B460009FD409 /* BinarySearchTree.swift */,
+				B9C3010C20C8B460009FD409 /* BinarySearchTreeNode.swift */,
+			);
+			path = Trees;
+			sourceTree = "<group>";
+		};
+		B9C3013120C99E30009FD409 /* Linked Lists */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3010720C8B460009FD409 /* DoublyLinkedList.swift */,
+				B9C3014120C9A3CD009FD409 /* DoublyLinkedListIterator.swift */,
+				B9C3010420C8B460009FD409 /* DoublyLinkedListNode.swift */,
+			);
+			path = "Linked Lists";
+			sourceTree = "<group>";
+		};
+		B9C3013220C99EF8009FD409 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3010920C8B460009FD409 /* Edge.swift */,
+				B9C3010B20C8B460009FD409 /* Graph.swift */,
+				B9C3010120C8B45F009FD409 /* Vertex.swift */,
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		B9C3013320C99F39009FD409 /* Queues */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3010020C8B45F009FD409 /* PriorityQueue.swift */,
+				B9C3010620C8B460009FD409 /* Queue.swift */,
+			);
+			path = Queues;
+			sourceTree = "<group>";
+		};
+		B9C3013420C99F5D009FD409 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3010520C8B460009FD409 /* Node.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B9C3013520C99FBC009FD409 /* Sorting Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3010320C8B45F009FD409 /* QuickSorter.swift */,
+			);
+			path = "Sorting Algorithms";
+			sourceTree = "<group>";
+		};
+		B9C3013620C99FEB009FD409 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9C300E920C8B3DE009FD409 /* JTDataStructures.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9C3013720C9A01B009FD409 /* HashMaps */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3010220C8B45F009FD409 /* HashMap.swift */,
+			);
+			path = HashMaps;
+			sourceTree = "<group>";
+		};
+		B9C3013820C9A02F009FD409 /* Stacks */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3010A20C8B460009FD409 /* Stack.swift */,
+			);
+			path = Stacks;
+			sourceTree = "<group>";
+		};
+		B9C3013920C9A04E009FD409 /* Trees */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3011B20C9980E009FD409 /* BinarySearchTreeNodeSpec.swift */,
+				B9C3011F20C9980E009FD409 /* BinarySearchTreeSpec.swift */,
+			);
+			path = Trees;
+			sourceTree = "<group>";
+		};
+		B9C3013A20C9A074009FD409 /* Linked Lists */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3011E20C9980E009FD409 /* DoublyLinkedListSpec.swift */,
+			);
+			path = "Linked Lists";
+			sourceTree = "<group>";
+		};
+		B9C3013B20C9A08C009FD409 /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3012020C9980E009FD409 /* EdgeSpec.swift */,
+				B9C3011D20C9980E009FD409 /* GraphSpec.swift */,
+			);
+			path = Graphs;
+			sourceTree = "<group>";
+		};
+		B9C3013C20C9A1FB009FD409 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3011A20C9980E009FD409 /* Factory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		B9C3013D20C9A21D009FD409 /* HashMaps */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3011C20C9980E009FD409 /* HashMapSpec.swift */,
+			);
+			path = HashMaps;
+			sourceTree = "<group>";
+		};
+		B9C3013E20C9A22C009FD409 /* Queues */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3012920C9981D009FD409 /* PriorityQueueSpec.swift */,
+				B9C3012A20C9981D009FD409 /* QueueSpec.swift */,
+			);
+			path = Queues;
+			sourceTree = "<group>";
+		};
+		B9C3013F20C9A234009FD409 /* Sorting Algorthims */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3012B20C9981D009FD409 /* QuickSorterSpec.swift */,
+			);
+			path = "Sorting Algorthims";
+			sourceTree = "<group>";
+		};
+		B9C3014020C9A249009FD409 /* Stacks */ = {
+			isa = PBXGroup;
+			children = (
+				B9C3012820C9981D009FD409 /* StackSpec.swift */,
+			);
+			path = Stacks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +344,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9C300FA20C8B3DE009FD409 /* Build configuration list for PBXNativeTarget "JTDataStructures" */;
 			buildPhases = (
+				0ADCFECFE8ED6DDDE94CCD56 /* [CP] Check Pods Manifest.lock */,
 				B9C300E120C8B3DE009FD409 /* Headers */,
 				B9C300E220C8B3DE009FD409 /* Sources */,
 				B9C300E320C8B3DE009FD409 /* Frameworks */,
@@ -122,9 +363,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9C300FD20C8B3DE009FD409 /* Build configuration list for PBXNativeTarget "JTDataStructuresTests" */;
 			buildPhases = (
+				D5B9B2AFB232A6B82538D397 /* [CP] Check Pods Manifest.lock */,
 				B9C300EB20C8B3DE009FD409 /* Sources */,
 				B9C300EC20C8B3DE009FD409 /* Frameworks */,
 				B9C300ED20C8B3DE009FD409 /* Resources */,
+				2697BB8F2EE3BACB42D11AD4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,6 +391,7 @@
 				TargetAttributes = {
 					B9C300E520C8B3DE009FD409 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					B9C300EE20C8B3DE009FD409 = {
 						CreatedOnToolsVersion = 10.0;
@@ -189,11 +433,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0ADCFECFE8ED6DDDE94CCD56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JTDataStructures-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2697BB8F2EE3BACB42D11AD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5B9B2AFB232A6B82538D397 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JTDataStructuresTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B9C300E220C8B3DE009FD409 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C3011820C8B461009FD409 /* Graph.swift in Sources */,
+				B9C3014220C9A3CD009FD409 /* DoublyLinkedListIterator.swift in Sources */,
+				B9C3011020C8B461009FD409 /* QuickSorter.swift in Sources */,
+				B9C3011320C8B461009FD409 /* Queue.swift in Sources */,
+				B9C3010D20C8B461009FD409 /* PriorityQueue.swift in Sources */,
+				B9C3011420C8B461009FD409 /* DoublyLinkedList.swift in Sources */,
+				B9C3011120C8B461009FD409 /* DoublyLinkedListNode.swift in Sources */,
+				B9C3011720C8B461009FD409 /* Stack.swift in Sources */,
+				B9C3011520C8B461009FD409 /* BinarySearchTree.swift in Sources */,
+				B9C3011220C8B461009FD409 /* Node.swift in Sources */,
+				B9C3011920C8B461009FD409 /* BinarySearchTreeNode.swift in Sources */,
+				B9C3010E20C8B461009FD409 /* Vertex.swift in Sources */,
+				B9C3011620C8B461009FD409 /* Edge.swift in Sources */,
+				B9C3010F20C8B461009FD409 /* HashMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +518,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C300F520C8B3DE009FD409 /* JTDataStructuresTests.swift in Sources */,
+				B9C3012520C9980F009FD409 /* DoublyLinkedListSpec.swift in Sources */,
+				B9C3012720C9980F009FD409 /* EdgeSpec.swift in Sources */,
+				B9C3012D20C9981D009FD409 /* PriorityQueueSpec.swift in Sources */,
+				B9C3012220C9980F009FD409 /* BinarySearchTreeNodeSpec.swift in Sources */,
+				B9C3012320C9980F009FD409 /* HashMapSpec.swift in Sources */,
+				B9C3012120C9980F009FD409 /* Factory.swift in Sources */,
+				B9C3012C20C9981D009FD409 /* StackSpec.swift in Sources */,
+				B9C3012F20C9981D009FD409 /* QuickSorterSpec.swift in Sources */,
+				B9C3012E20C9981D009FD409 /* QueueSpec.swift in Sources */,
+				B9C3012420C9980F009FD409 /* GraphSpec.swift in Sources */,
+				B9C3012620C9980F009FD409 /* BinarySearchTreeSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +665,9 @@
 		};
 		B9C300FB20C8B3DE009FD409 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB2088F4D6A4141D1648C68D /* Pods-JTDataStructures.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -356,6 +685,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliantejera.JTDataStructures;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,7 +693,9 @@
 		};
 		B9C300FC20C8B3DE009FD409 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC524DA1E16D43F330772C5D /* Pods-JTDataStructures.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -388,7 +720,9 @@
 		};
 		B9C300FE20C8B3DE009FD409 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE25F4FD2C6A6305CDF7148B /* Pods-JTDataStructuresTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VDYWQG4YL7;
 				INFOPLIST_FILE = JTDataStructuresTests/Info.plist;
@@ -406,7 +740,9 @@
 		};
 		B9C300FF20C8B3DE009FD409 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91D2A289E8D3326FD235387B /* Pods-JTDataStructuresTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VDYWQG4YL7;
 				INFOPLIST_FILE = JTDataStructuresTests/Info.plist;
