@@ -24,10 +24,10 @@ class PriorityQueueSpec: QuickSpec {
             describe("enqueue") {
                 
                 beforeEach {
-                    priorityQueue.enqueue(value: 10)
-                    priorityQueue.enqueue(value: 5)
-                    priorityQueue.enqueue(value: 6)
-                    priorityQueue.enqueue(value: 25)
+                    priorityQueue.enqueue(10)
+                    priorityQueue.enqueue(5)
+                    priorityQueue.enqueue(6)
+                    priorityQueue.enqueue(25)
                 }
                 
                 it("enqueues the numbers in the heap") {
@@ -48,14 +48,14 @@ class PriorityQueueSpec: QuickSpec {
                 context("when the priority queue is not empty") {
                     
                     beforeEach {
-                        priorityQueue.enqueue(value: 10)
-                        priorityQueue.enqueue(value: 5)
-                        priorityQueue.enqueue(value: 25)
-                        priorityQueue.enqueue(value: 6)
-                        priorityQueue.enqueue(value: 1)
-                        priorityQueue.enqueue(value: 100)
-                        priorityQueue.enqueue(value: 75)
-                        priorityQueue.enqueue(value: 30)
+                        priorityQueue.enqueue(10)
+                        priorityQueue.enqueue(5)
+                        priorityQueue.enqueue(25)
+                        priorityQueue.enqueue(6)
+                        priorityQueue.enqueue(1)
+                        priorityQueue.enqueue(100)
+                        priorityQueue.enqueue(75)
+                        priorityQueue.enqueue(30)
                         
                     }
                     
@@ -91,8 +91,8 @@ class PriorityQueueSpec: QuickSpec {
                 context("when the priority queue is not empty") {
                     
                     beforeEach {
-                        priorityQueue.enqueue(value: 10)
-                        priorityQueue.enqueue(value: 25)
+                        priorityQueue.enqueue(10)
+                        priorityQueue.enqueue(25)
                     }
                     
                     it("returns the first value of the queue") {
@@ -121,7 +121,7 @@ class PriorityQueueSpec: QuickSpec {
                 context("when the priority queue has items") {
                     
                     beforeEach {
-                        priorityQueue.enqueue(value: 5)
+                        priorityQueue.enqueue(5)
                     }
                     
                     it("returns false") {

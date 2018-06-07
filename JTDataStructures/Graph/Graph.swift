@@ -34,7 +34,7 @@ public struct Graph<T: Equatable> {
     public func breathFirstSearch(source: Vertex<T>) {
         initializeSingleSource(source: source)
         var queue = Queue<Vertex<T>>()
-        queue.enqueue(value: source)
+        queue.enqueue(source)
         
         while !queue.isEmpty {
             if let vertex = queue.dequeue() {
@@ -42,7 +42,7 @@ public struct Graph<T: Equatable> {
                     if edge.destination.distance == Double.infinity {
                         edge.destination.distance = vertex.distance + 1
                         edge.destination.parent = vertex
-                        queue.enqueue(value: edge.destination)
+                        queue.enqueue(edge.destination)
                     }
                 }
             }
@@ -134,13 +134,13 @@ public struct Graph<T: Equatable> {
         var queue = PriorityQueue<Vertex<T>> { (u, v) -> Bool in
             return u.distance < v.distance
         }
-        queue.enqueue(value: source)
+        queue.enqueue(source)
         while !queue.isEmpty {
             if let vertex = queue.dequeue() {
                 for edge in edges(vertex: vertex) {
                     if !edge.isRelaxed {
                         edge.relax()
-                        queue.enqueue(value: edge.destination)
+                        queue.enqueue(edge.destination)
                     }
                 }
             }
