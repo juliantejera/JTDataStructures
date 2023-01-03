@@ -24,7 +24,6 @@ public struct QuickSorter<T: Comparable> {
     
     // Hoare's Partition
     private func partition(_ array: inout [T], low: Int, high: Int) -> Int {
-        
         let pivot = array[Int(arc4random()) % array.count]
         var i = low - 1
         var j = high + 1

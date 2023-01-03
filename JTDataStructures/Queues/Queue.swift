@@ -37,10 +37,6 @@ public struct Queue<T> {
     }
     
     public mutating func dequeue() -> T? {
-        if head == nil {
-            return nil
-        }
-        
         let value = head?.value
         head = head?.next
         if head == nil {

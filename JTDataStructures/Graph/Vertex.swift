@@ -10,7 +10,7 @@ import Foundation
 
 public class Vertex<T> {
     public let value: T
-    public var parent: Vertex<T>?
+    public weak var parent: Vertex<T>?
     public var distance: Double
     
     public init(value: T) {
