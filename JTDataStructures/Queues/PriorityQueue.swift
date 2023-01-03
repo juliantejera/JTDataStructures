@@ -13,11 +13,11 @@ public struct PriorityQueue<T> {
     private var items = [T]()
     public let compare: (T, T) -> Bool
     public var isEmpty: Bool {
-        return items.isEmpty
+        items.isEmpty
     }
     
     public var count: Int {
-        return items.count
+        items.count
     }
     
     public init(compare: @escaping (T, T) -> Bool) {
@@ -46,13 +46,11 @@ public struct PriorityQueue<T> {
     }
     
     private mutating func heapifyOnEnqueue() {
-        
         var i = items.count - 1;
         while i > 0 && compare(items[i], items[parent(index: i)])  {
             items.swapAt(i, parent(index: i))
             i = parent(index: i)
         }
-
     }
     
     private mutating func heapifyOnDequeue(index: Int) {
@@ -75,14 +73,14 @@ public struct PriorityQueue<T> {
     }
     
     private func parent(index: Int) -> Int {
-        return (index - 1) >> 1
+        (index - 1) >> 1
     }
     
     private func left(index: Int) -> Int {
-        return (index << 1) + 1
+        (index << 1) + 1
     }
     
     private func right(index: Int) -> Int {
-        return (index << 1) + 2
+        (index << 1) + 2
     }
 }
