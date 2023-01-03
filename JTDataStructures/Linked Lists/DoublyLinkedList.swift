@@ -46,7 +46,7 @@ public class DoublyLinkedList<T> {
 extension DoublyLinkedList: Sequence {
     
     public func makeIterator() -> DoublyLinkedListIterator<T> {
-        return DoublyLinkedListIterator(list: self)
+        DoublyLinkedListIterator(list: self)
     }
     
 }

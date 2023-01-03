@@ -27,7 +27,7 @@ public struct Graph<T: Equatable> {
     }
     
     public func edges(vertex: Vertex<T>) -> [Edge<T>] {
-        return edges.filter { $0.source.value == vertex.value }
+        edges.filter { $0.source.value == vertex.value }
     }
     
     // O(V + E)

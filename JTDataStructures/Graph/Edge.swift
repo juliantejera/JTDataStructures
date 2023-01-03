@@ -22,7 +22,7 @@ public class Edge<T: Equatable> {
     }
     
     public var isRelaxed: Bool {
-        return destination.distance <= source.distance + weight
+        destination.distance <= source.distance + weight
     }
     
     public func relax() {

@@ -15,7 +15,7 @@ public struct Queue<T> {
     public private(set) var count: Int
     
     public var isEmpty: Bool {
-        return head == nil
+        head == nil
     }
     
     public init() {

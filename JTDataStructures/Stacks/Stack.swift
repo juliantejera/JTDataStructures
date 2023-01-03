@@ -31,7 +31,7 @@ public struct Stack<T> {
     }
     
     public func peek() -> T? {
-        return top?.value
+        top?.value
     }
     
 }

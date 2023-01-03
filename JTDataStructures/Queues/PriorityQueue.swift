@@ -42,7 +42,7 @@ public struct PriorityQueue<T> {
     }
     
     public func peek() -> T? {
-        return items.first
+        items.first
     }
     
     private mutating func heapifyOnEnqueue() {
@@ -56,7 +56,6 @@ public struct PriorityQueue<T> {
     }
     
     private mutating func heapifyOnDequeue(index: Int) {
-        
         let leftIndex = left(index: index)
         let rightIndex = right(index: index)
         var largestIndex = index
