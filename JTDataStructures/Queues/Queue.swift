@@ -23,14 +23,11 @@ public struct Queue<T> {
     }
     
     public mutating func enqueue(_ value: T) {
-        let node = Node(value: value)
-        
         if head == nil {
-            head = node
+            head = Node(value)
             tail = head
         } else {
-            tail?.next = node
-            tail = node
+            tail = Node(value, next: tail)
         }
         
         count += 1

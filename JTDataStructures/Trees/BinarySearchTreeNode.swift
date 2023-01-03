@@ -84,8 +84,14 @@ public class BinarySearchTreeNode<T: Comparable> {
         return currentNode.parent
     }
     
-    public init(value: T) {
+    public init(_ value: T,
+                parent: BinarySearchTreeNode? = nil,
+                left: BinarySearchTreeNode? = nil,
+                right: BinarySearchTreeNode? = nil) {
         self.value = value
+        self.parent = parent
+        self.left = left
+        self.right = right
     }
     
 }

@@ -13,15 +13,13 @@ public struct Stack<T> {
     private var top: Node<T>?
     
     public var isEmpty: Bool {
-        return top == nil
+        top == nil
     }
     
     public init() { }
     
     public mutating func push(value: T) {
-        let node = Node(value: value)
-        node.next = top
-        top = node
+        top = Node(value, next: top)
     }
     
     public mutating func pop() -> T? {

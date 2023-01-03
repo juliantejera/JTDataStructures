@@ -22,7 +22,7 @@ public class BinarySearchTree<T: Comparable> {
         if let root = root {
             insert(currentNode: root, value: value)
         } else {
-            root = BinarySearchTreeNode(value: value)
+            root = BinarySearchTreeNode(value)
         }
         
         count += 1
@@ -33,14 +33,14 @@ public class BinarySearchTree<T: Comparable> {
             if let left = currentNode.left {
                 insert(currentNode: left, value: value)
             } else {
-                currentNode.left = BinarySearchTreeNode(value: value)
+                currentNode.left = BinarySearchTreeNode(value)
                 currentNode.left?.parent = currentNode
             }
         } else {
             if let right = currentNode.right {
                 insert(currentNode: right, value: value)
             } else {
-                currentNode.right = BinarySearchTreeNode(value: value)
+                currentNode.right = BinarySearchTreeNode(value)
                 currentNode.right?.parent = currentNode
             }
         }

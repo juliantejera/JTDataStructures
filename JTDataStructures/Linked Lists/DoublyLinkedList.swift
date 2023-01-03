@@ -17,7 +17,7 @@ public class DoublyLinkedList<T> {
     
     // O(1)
     public func insert(value: T) {
-        let node = DoublyLinkedListNode(value: value)
+        let node = DoublyLinkedListNode(value)
         if first == nil {
             first = node
             last = node

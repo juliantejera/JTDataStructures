@@ -12,7 +12,7 @@ import JTDataStructures
 struct Factory {
     
     func createBinarySearchTreeNode(_ value: Int = Int(arc4random())) -> BinarySearchTreeNode<Int> {
-        BinarySearchTreeNode(value: value)
+        BinarySearchTreeNode(value)
     }
     
 }
