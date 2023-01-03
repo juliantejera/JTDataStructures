@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1AF0FC72C77870BE2EDF2881 /* Pods_JTDataStructuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C63045C0ED6363BFB3D7023 /* Pods_JTDataStructuresTests.framework */; };
 		B56EB248A2673B4C2747D159 /* Pods_JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A797833626F73AD0CBC78F5 /* Pods_JTDataStructures.framework */; };
+		B9963ECB2964B25B00CAD8EE /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9963ECA2964B25B00CAD8EE /* Trie.swift */; };
+		B9963ECD2964B88F00CAD8EE /* TrieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9963ECC2964B88F00CAD8EE /* TrieTests.swift */; };
 		B9C300F020C8B3DE009FD409 /* JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C300E620C8B3DE009FD409 /* JTDataStructures.framework */; };
 		B9C300F720C8B3DE009FD409 /* JTDataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C300E920C8B3DE009FD409 /* JTDataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9C3010D20C8B461009FD409 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010020C8B45F009FD409 /* PriorityQueue.swift */; };
@@ -54,6 +56,8 @@
 		91D2A289E8D3326FD235387B /* Pods-JTDataStructuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructuresTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB2088F4D6A4141D1648C68D /* Pods-JTDataStructures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructures/Pods-JTDataStructures.debug.xcconfig"; sourceTree = "<group>"; };
 		AC524DA1E16D43F330772C5D /* Pods-JTDataStructures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructures.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructures/Pods-JTDataStructures.release.xcconfig"; sourceTree = "<group>"; };
+		B9963ECA2964B25B00CAD8EE /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
+		B9963ECC2964B88F00CAD8EE /* TrieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrieTests.swift; sourceTree = "<group>"; };
 		B9C300E620C8B3DE009FD409 /* JTDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C300E920C8B3DE009FD409 /* JTDataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTDataStructures.h; sourceTree = "<group>"; };
 		B9C300EA20C8B3DE009FD409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 			children = (
 				B9C3010820C8B460009FD409 /* BinarySearchTree.swift */,
 				B9C3010C20C8B460009FD409 /* BinarySearchTreeNode.swift */,
+				B9963ECA2964B25B00CAD8EE /* Trie.swift */,
 			);
 			path = Trees;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			children = (
 				B9C3011B20C9980E009FD409 /* BinarySearchTreeNodeSpec.swift */,
 				B9C3011F20C9980E009FD409 /* BinarySearchTreeSpec.swift */,
+				B9963ECC2964B88F00CAD8EE /* TrieTests.swift */,
 			);
 			path = Trees;
 			sourceTree = "<group>";
@@ -498,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9963ECB2964B25B00CAD8EE /* Trie.swift in Sources */,
 				B9C3011820C8B461009FD409 /* Graph.swift in Sources */,
 				B9C3014220C9A3CD009FD409 /* DoublyLinkedListIterator.swift in Sources */,
 				B9C3011020C8B461009FD409 /* QuickSorter.swift in Sources */,
@@ -528,6 +535,7 @@
 				B9C3012C20C9981D009FD409 /* StackSpec.swift in Sources */,
 				B9C3012F20C9981D009FD409 /* QuickSorterSpec.swift in Sources */,
 				B9C3012E20C9981D009FD409 /* QueueSpec.swift in Sources */,
+				B9963ECD2964B88F00CAD8EE /* TrieTests.swift in Sources */,
 				B9C3012420C9980F009FD409 /* GraphSpec.swift in Sources */,
 				B9C3012620C9980F009FD409 /* BinarySearchTreeSpec.swift in Sources */,
 			);
