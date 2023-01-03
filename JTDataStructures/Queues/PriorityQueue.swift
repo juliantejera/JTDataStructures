@@ -24,11 +24,13 @@ public struct PriorityQueue<T> {
         self.compare = compare
     }
     
+    // O(log n)
     public mutating func enqueue(_ value: T) {
         items.append(value)
         heapifyOnEnqueue()
     }
     
+    // O(log n)
     public mutating func dequeue() -> T? {
         if items.isEmpty {
             return nil
@@ -41,6 +43,7 @@ public struct PriorityQueue<T> {
         return value
     }
     
+    // O(1)
     public func peek() -> T? {
         items.first
     }
@@ -72,14 +75,17 @@ public struct PriorityQueue<T> {
         }
     }
     
+    // (index - 1) / 2
     private func parent(index: Int) -> Int {
         (index - 1) >> 1
     }
     
+    // (index * 2) + 1
     private func left(index: Int) -> Int {
         (index << 1) + 1
     }
     
+    // (index * 2) + 2
     private func right(index: Int) -> Int {
         (index << 1) + 2
     }
