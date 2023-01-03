@@ -24,7 +24,7 @@ public struct PriorityQueue<T> {
         self.compare = compare
     }
     
-    public mutating func enqueue(value: T) {
+    public mutating func enqueue(_ value: T) {
         items.append(value)
         heapifyOnEnqueue()
     }

@@ -22,7 +22,7 @@ public struct Queue<T> {
         self.count = 0
     }
     
-    public mutating func enqueue(value: T) {
+    public mutating func enqueue(_ value: T) {
         let node = Node(value: value)
         
         if head == nil {
@@ -37,10 +37,6 @@ public struct Queue<T> {
     }
     
     public mutating func dequeue() -> T? {
-        if head == nil {
-            return nil
-        }
-        
         let value = head?.value
         head = head?.next
         if head == nil {

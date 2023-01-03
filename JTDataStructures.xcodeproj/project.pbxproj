@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E49D39699CFA76DBD0CF5DB /* Pods_JTDataStructuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 197C4FB8433AC21E5B5317B5 /* Pods_JTDataStructuresTests.framework */; };
-		5F285F63F17C613EE3C4FA35 /* Pods_JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5821D22B6AD3A5D7B4E025 /* Pods_JTDataStructures.framework */; };
+		1AF0FC72C77870BE2EDF2881 /* Pods_JTDataStructuresTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C63045C0ED6363BFB3D7023 /* Pods_JTDataStructuresTests.framework */; };
+		B56EB248A2673B4C2747D159 /* Pods_JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A797833626F73AD0CBC78F5 /* Pods_JTDataStructures.framework */; };
 		B9C300F020C8B3DE009FD409 /* JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C300E620C8B3DE009FD409 /* JTDataStructures.framework */; };
 		B9C300F720C8B3DE009FD409 /* JTDataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C300E920C8B3DE009FD409 /* JTDataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9C3010D20C8B461009FD409 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010020C8B45F009FD409 /* PriorityQueue.swift */; };
@@ -49,8 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		197C4FB8433AC21E5B5317B5 /* Pods_JTDataStructuresTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTDataStructuresTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F5821D22B6AD3A5D7B4E025 /* Pods_JTDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C63045C0ED6363BFB3D7023 /* Pods_JTDataStructuresTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTDataStructuresTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A797833626F73AD0CBC78F5 /* Pods_JTDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91D2A289E8D3326FD235387B /* Pods-JTDataStructuresTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructuresTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB2088F4D6A4141D1648C68D /* Pods-JTDataStructures.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructures.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructures/Pods-JTDataStructures.debug.xcconfig"; sourceTree = "<group>"; };
 		AC524DA1E16D43F330772C5D /* Pods-JTDataStructures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructures.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructures/Pods-JTDataStructures.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F285F63F17C613EE3C4FA35 /* Pods_JTDataStructures.framework in Frameworks */,
+				B56EB248A2673B4C2747D159 /* Pods_JTDataStructures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C300F020C8B3DE009FD409 /* JTDataStructures.framework in Frameworks */,
-				0E49D39699CFA76DBD0CF5DB /* Pods_JTDataStructuresTests.framework in Frameworks */,
+				1AF0FC72C77870BE2EDF2881 /* Pods_JTDataStructuresTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,8 +122,8 @@
 		7DB7275C5922BCF1576C8CD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4F5821D22B6AD3A5D7B4E025 /* Pods_JTDataStructures.framework */,
-				197C4FB8433AC21E5B5317B5 /* Pods_JTDataStructuresTests.framework */,
+				6A797833626F73AD0CBC78F5 /* Pods_JTDataStructures.framework */,
+				5C63045C0ED6363BFB3D7023 /* Pods_JTDataStructuresTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -367,7 +367,7 @@
 				B9C300EB20C8B3DE009FD409 /* Sources */,
 				B9C300EC20C8B3DE009FD409 /* Frameworks */,
 				B9C300ED20C8B3DE009FD409 /* Resources */,
-				2697BB8F2EE3BACB42D11AD4 /* [CP] Embed Pods Frameworks */,
+				B11AE0D7957C489D835C6D8E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -386,15 +386,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Julian Tejera-Frias";
 				TargetAttributes = {
 					B9C300E520C8B3DE009FD409 = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = "";
 					};
 					B9C300EE20C8B3DE009FD409 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = "";
 					};
 				};
 			};
@@ -452,7 +453,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2697BB8F2EE3BACB42D11AD4 /* [CP] Embed Pods Frameworks */ = {
+		B11AE0D7957C489D835C6D8E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -569,6 +570,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -632,6 +634,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -686,7 +689,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -713,7 +716,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliantejera.JTDataStructures;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -733,7 +736,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliantejera.JTDataStructuresTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -753,7 +756,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.juliantejera.JTDataStructuresTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
