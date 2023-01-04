@@ -19,7 +19,7 @@ struct Trie {
                 children[char]
             }
             set(newValue) {
-               children[char] = newValue
+                children[char] = newValue
             }
         }
         
@@ -52,18 +52,8 @@ struct Trie {
         currentNode.isTerminating = true
     }
     
-    
     func isValidPrefix(prefix: String) -> Bool {
-        var currentNode = root
-        for char in prefix {
-            if let nextNode = currentNode[char] {
-                currentNode = nextNode
-            } else {
-                return false
-            }
-        }
-        
-        return true
+       node(with: prefix) != nil
     }
     
     private func node(with prefix: String) -> Trie.Node? {
