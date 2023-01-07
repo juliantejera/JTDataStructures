@@ -8,21 +8,17 @@
 
 import Foundation
 
-public struct Queue<T> {
+struct Queue<T> {
     
     private var head: Node<T>?
     private var tail: Node<T>?
-    public private(set) var count: Int
+    private(set) var count: Int = 0
     
-    public var isEmpty: Bool {
+    var isEmpty: Bool {
         head == nil
     }
     
-    public init() {
-        self.count = 0
-    }
-    
-    public mutating func enqueue(_ value: T) {
+    mutating func enqueue(_ value: T) {
         if head == nil {
             head = Node(value)
             tail = head
@@ -34,7 +30,7 @@ public struct Queue<T> {
         count += 1
     }
     
-    public mutating func dequeue() -> T? {
+    mutating func dequeue() -> T? {
         if count == 0 {
             return nil
         }
