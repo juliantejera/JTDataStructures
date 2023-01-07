@@ -27,13 +27,18 @@ public struct Queue<T> {
             head = Node(value)
             tail = head
         } else {
-            tail = Node(value, next: tail)
+            tail?.next = Node(value)
+            tail = tail?.next
         }
         
         count += 1
     }
     
     public mutating func dequeue() -> T? {
+        if count == 0 {
+            return nil
+        }
+        
         let value = head?.value
         head = head?.next
         if head == nil {

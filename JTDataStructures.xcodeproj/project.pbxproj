@@ -11,6 +11,7 @@
 		B56EB248A2673B4C2747D159 /* Pods_JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A797833626F73AD0CBC78F5 /* Pods_JTDataStructures.framework */; };
 		B9963ECB2964B25B00CAD8EE /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9963ECA2964B25B00CAD8EE /* Trie.swift */; };
 		B9963ECD2964B88F00CAD8EE /* TrieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9963ECC2964B88F00CAD8EE /* TrieTests.swift */; };
+		B9963ECF2969FC3E00CAD8EE /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9963ECE2969FC3E00CAD8EE /* QueueTests.swift */; };
 		B9C300F020C8B3DE009FD409 /* JTDataStructures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9C300E620C8B3DE009FD409 /* JTDataStructures.framework */; };
 		B9C300F720C8B3DE009FD409 /* JTDataStructures.h in Headers */ = {isa = PBXBuildFile; fileRef = B9C300E920C8B3DE009FD409 /* JTDataStructures.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9C3010D20C8B461009FD409 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3010020C8B45F009FD409 /* PriorityQueue.swift */; };
@@ -35,7 +36,6 @@
 		B9C3012720C9980F009FD409 /* EdgeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3012020C9980E009FD409 /* EdgeSpec.swift */; };
 		B9C3012C20C9981D009FD409 /* StackSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3012820C9981D009FD409 /* StackSpec.swift */; };
 		B9C3012D20C9981D009FD409 /* PriorityQueueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3012920C9981D009FD409 /* PriorityQueueSpec.swift */; };
-		B9C3012E20C9981D009FD409 /* QueueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3012A20C9981D009FD409 /* QueueSpec.swift */; };
 		B9C3012F20C9981D009FD409 /* QuickSorterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3012B20C9981D009FD409 /* QuickSorterSpec.swift */; };
 		B9C3014220C9A3CD009FD409 /* DoublyLinkedListIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C3014120C9A3CD009FD409 /* DoublyLinkedListIterator.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +58,7 @@
 		AC524DA1E16D43F330772C5D /* Pods-JTDataStructures.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructures.release.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructures/Pods-JTDataStructures.release.xcconfig"; sourceTree = "<group>"; };
 		B9963ECA2964B25B00CAD8EE /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
 		B9963ECC2964B88F00CAD8EE /* TrieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrieTests.swift; sourceTree = "<group>"; };
+		B9963ECE2969FC3E00CAD8EE /* QueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
 		B9C300E620C8B3DE009FD409 /* JTDataStructures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTDataStructures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C300E920C8B3DE009FD409 /* JTDataStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JTDataStructures.h; sourceTree = "<group>"; };
 		B9C300EA20C8B3DE009FD409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,7 +86,6 @@
 		B9C3012020C9980E009FD409 /* EdgeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeSpec.swift; sourceTree = "<group>"; };
 		B9C3012820C9981D009FD409 /* StackSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackSpec.swift; sourceTree = "<group>"; };
 		B9C3012920C9981D009FD409 /* PriorityQueueSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueueSpec.swift; sourceTree = "<group>"; };
-		B9C3012A20C9981D009FD409 /* QueueSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueSpec.swift; sourceTree = "<group>"; };
 		B9C3012B20C9981D009FD409 /* QuickSorterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickSorterSpec.swift; sourceTree = "<group>"; };
 		B9C3014120C9A3CD009FD409 /* DoublyLinkedListIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublyLinkedListIterator.swift; sourceTree = "<group>"; };
 		BE25F4FD2C6A6305CDF7148B /* Pods-JTDataStructuresTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTDataStructuresTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JTDataStructuresTests/Pods-JTDataStructuresTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -311,7 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				B9C3012920C9981D009FD409 /* PriorityQueueSpec.swift */,
-				B9C3012A20C9981D009FD409 /* QueueSpec.swift */,
+				B9963ECE2969FC3E00CAD8EE /* QueueTests.swift */,
 			);
 			path = Queues;
 			sourceTree = "<group>";
@@ -534,10 +534,10 @@
 				B9C3012120C9980F009FD409 /* Factory.swift in Sources */,
 				B9C3012C20C9981D009FD409 /* StackSpec.swift in Sources */,
 				B9C3012F20C9981D009FD409 /* QuickSorterSpec.swift in Sources */,
-				B9C3012E20C9981D009FD409 /* QueueSpec.swift in Sources */,
 				B9963ECD2964B88F00CAD8EE /* TrieTests.swift in Sources */,
 				B9C3012420C9980F009FD409 /* GraphSpec.swift in Sources */,
 				B9C3012620C9980F009FD409 /* BinarySearchTreeSpec.swift in Sources */,
+				B9963ECF2969FC3E00CAD8EE /* QueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
