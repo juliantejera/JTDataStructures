@@ -13,7 +13,7 @@ struct KeyValueWrapper<Key: Hashable, Value> {
     var value: Value
 }
 
-public struct HashMap<Key: Hashable, Value> {
+struct HashMap<Key: Hashable, Value> {
     
     typealias KeyValue = KeyValueWrapper<Key, Value>
     // Knuth suggests this constant, so it must be good! 🤔
@@ -21,10 +21,10 @@ public struct HashMap<Key: Hashable, Value> {
     let multiplicationMethodConstant: Double = (sqrt(5) - 1) / 2.0
     
     private var capacity: Int
-    public private(set) var count = 0
+    private(set) var count = 0
     var buckets: [DoublyLinkedList<KeyValue>?]
     
-    public init(capacity: Int = 20) {
+    init(capacity: Int = 20) {
         self.capacity = capacity
         self.buckets = Array(repeating: nil, count: capacity)
     }
@@ -36,7 +36,7 @@ public struct HashMap<Key: Hashable, Value> {
         return Int(Double(capacity) * (product - floor(product)))
     }
     
-    public subscript(key: Key) -> Value? {
+    subscript(key: Key) -> Value? {
         get {
             return search(key: key)
         }
@@ -82,12 +82,12 @@ public struct HashMap<Key: Hashable, Value> {
         resizeIfNeeded()
     }
     
-    public func contains(key: Key) -> Bool {
+    func contains(key: Key) -> Bool {
         let h = hash(forKey: key)
         return buckets[h]?.contains { $0.value.key == key } == true
     }
     
-    public mutating func remove(key: Key) {
+    mutating func remove(key: Key) {
         let h = hash(forKey: key)
         
         guard let list = buckets[h], let node = list.filter({ $0.value.key == key }).first else {
