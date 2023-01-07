@@ -8,30 +8,30 @@
 
 import Foundation
 
-public struct PriorityQueue<T> {
+struct PriorityQueue<T> {
     
     private var items = [T]()
-    public let compare: (T, T) -> Bool
-    public var isEmpty: Bool {
+    let compare: (T, T) -> Bool
+    var isEmpty: Bool {
         items.isEmpty
     }
     
-    public var count: Int {
+    var count: Int {
         items.count
     }
     
-    public init(compare: @escaping (T, T) -> Bool) {
+    init(compare: @escaping (T, T) -> Bool) {
         self.compare = compare
     }
     
     // O(log n)
-    public mutating func enqueue(_ value: T) {
+    mutating func enqueue(_ value: T) {
         items.append(value)
         heapifyOnEnqueue()
     }
     
     // O(log n)
-    public mutating func dequeue() -> T? {
+    mutating func dequeue() -> T? {
         if items.isEmpty {
             return nil
         }
@@ -44,7 +44,7 @@ public struct PriorityQueue<T> {
     }
     
     // O(1)
-    public func peek() -> T? {
+    func peek() -> T? {
         items.first
     }
     
