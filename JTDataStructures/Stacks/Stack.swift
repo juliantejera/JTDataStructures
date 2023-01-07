@@ -15,9 +15,7 @@ struct Stack<T> {
     var isEmpty: Bool {
         top == nil
     }
-    
-    init() { }
-    
+        
     mutating func push(value: T) {
         top = Node(value, next: top)
     }
