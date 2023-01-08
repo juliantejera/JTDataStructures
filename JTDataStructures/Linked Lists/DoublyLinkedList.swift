@@ -40,7 +40,6 @@ public class DoublyLinkedList<T> {
         node.previous?.next = node.next
         node.next?.previous = node.previous
     }
-    
 }
 
 extension DoublyLinkedList: Sequence {
