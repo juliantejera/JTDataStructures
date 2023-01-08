@@ -8,13 +8,9 @@
 
 import Foundation
 
-public struct QuickSorter<T: Comparable> {
+struct QuickSorter<T: Comparable> {
     
-    public init() {
-        
-    }
-    
-    public func sort(_ array: inout [T], low: Int, high: Int) {
+    static func sort(_ array: inout [T], low: Int, high: Int) {
         if low < high {
             let p = partition(&array, low: low, high: high)
             sort(&array, low: low, high: p)
@@ -23,13 +19,12 @@ public struct QuickSorter<T: Comparable> {
     }
     
     // Hoare's Partition
-    private func partition(_ array: inout [T], low: Int, high: Int) -> Int {
+    private static func partition(_ array: inout [T], low: Int, high: Int) -> Int {
         let pivot = array[Int(arc4random()) % array.count]
         var i = low - 1
         var j = high + 1
         
         while (true) {
-            
             repeat {
                 i += 1
             } while array[i] < pivot
@@ -45,7 +40,4 @@ public struct QuickSorter<T: Comparable> {
             }
         }
     }
-    
-    
-
 }
