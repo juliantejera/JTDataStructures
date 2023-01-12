@@ -22,7 +22,7 @@ struct HashMap<Key: Hashable, Value> {
     
     private var capacity: Int
     private(set) var count = 0
-    var buckets: [DoublyLinkedList<KeyValue>?]
+    var buckets: [[KeyValue]?]
     
     init(capacity: Int = 20) {
         self.capacity = capacity
@@ -31,6 +31,9 @@ struct HashMap<Key: Hashable, Value> {
     
     // Uses multiplication method to create hash
     // h(k) = floor( m * (k * A mod 1) )
+    // m = capacity of HashMap
+    // k = hash value of the key
+    // A = constant between 0 and 1
     private func hash(forKey key: Key) -> Int {
         let product: Double = multiplicationMethodConstant * Double(key.hashValue)
         return Int(Double(capacity) * (product - floor(product)))
@@ -45,58 +48,88 @@ struct HashMap<Key: Hashable, Value> {
         }
     }
     
-    private mutating func bucket(forHash h: Int) -> DoublyLinkedList<KeyValue> {
-        if buckets[h] == nil {
-            buckets[h] = DoublyLinkedList<KeyValue>()
+    private mutating func bucket(forHash h: Int) -> [KeyValue] {
+        guard let bucket = buckets[h] else {
+            let bucket = [KeyValue]()
+            buckets[h] = bucket
+            return bucket
         }
         
-        return buckets[h]!
+        return bucket
     }
     
     private func search(key: Key) -> Value? {
         let h = hash(forKey: key)
-        return buckets[h]?.filter { $0.value.key == key }.first?.value.value
+        guard let bucket = buckets[h] else {
+            return nil
+        }
+        
+        for element in bucket {
+            if element.key == key {
+                return element.value
+            }
+        }
+        
+        return nil
     }
     
     private mutating func upsert(key: Key, value: Value?) {
-        guard let value = value else {
+        guard let value else {
             // If we're trying to set the value to nil
             remove(key: key)
             return
         }
         
         let h = hash(forKey: key)
-        let list = bucket(forHash: h)
+        let bucket = bucket(forHash: h)
         
-        // Update node if it exists
-        for node in list {
-            if node.value.key == key {
-                node.value.value = value
-                return
-            }
+        // Update element if it exists
+        if let index = index(of: key, in: bucket) {
+            buckets[h]?[index].value = value
+        } else {
+            buckets[h]?.append(KeyValue(key: key, value: value))
+            count += 1
+            resizeIfNeeded()
         }
-
-        // Otherwise create a new node
-        list.insert(value: KeyValue(key: key, value: value))
-        count += 1
-        resizeIfNeeded()
     }
     
     func contains(key: Key) -> Bool {
         let h = hash(forKey: key)
-        return buckets[h]?.contains { $0.value.key == key } == true
+        guard let bucket = buckets[h] else {
+            return false
+        }
+        
+        for element in bucket {
+            if element.key == key {
+                return true
+            }
+        }
+        
+        return false
+    }
+    
+    private func index(of key: Key, in bucket: [KeyValue]) -> Int? {
+        for (index, element) in bucket.enumerated() {
+            if element.key == key {
+                return index
+            }
+        }
+        
+        return nil
     }
     
     mutating func remove(key: Key) {
         let h = hash(forKey: key)
         
-        guard let list = buckets[h], let node = list.filter({ $0.value.key == key }).first else {
+        guard let bucket = buckets[h], let indexOfElementToBeRemoved = index(of: key, in: bucket) else {
             return
         }
         
-        list.remove(node: node)
-        buckets[h] = list.first == nil ? nil : list
+        buckets[h]?.remove(at: indexOfElementToBeRemoved)
         count -= 1
+        if bucket.isEmpty {
+            buckets[h] = nil
+        }
     }
     
     private mutating func resizeIfNeeded() {
@@ -108,11 +141,10 @@ struct HashMap<Key: Hashable, Value> {
     private mutating func resize(capacity: Int)  {
         var temp = HashMap<Key, Value>(capacity: capacity)
         
-        for list in buckets {
-            if let list = list {
-                for node in list {
-                    let keyValue = node.value
-                    temp[keyValue.key] = keyValue.value
+        for bucket in buckets {
+            if let bucket {
+                for element in bucket {
+                    temp[element.key] = element.value
                 }
             }
         }
