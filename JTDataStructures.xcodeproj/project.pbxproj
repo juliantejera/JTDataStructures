@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B973E72F298C2DE60087FD23 /* BInarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973E72E298C2DE60087FD23 /* BInarySearchTree.swift */; };
+		B973E731298C3B340087FD23 /* BinarySearchTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973E730298C3B340087FD23 /* BinarySearchTreeTests.swift */; };
+		B973E734298C51FB0087FD23 /* CustomAssertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B973E733298C51FB0087FD23 /* CustomAssertions.swift */; };
 		B9963ECB2964B25B00CAD8EE /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9963ECA2964B25B00CAD8EE /* Trie.swift */; };
 		B9963ECD2964B88F00CAD8EE /* TrieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9963ECC2964B88F00CAD8EE /* TrieTests.swift */; };
 		B9963ECF2969FC3E00CAD8EE /* QueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9963ECE2969FC3E00CAD8EE /* QueueTests.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B973E72E298C2DE60087FD23 /* BInarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BInarySearchTree.swift; sourceTree = "<group>"; };
+		B973E730298C3B340087FD23 /* BinarySearchTreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeTests.swift; sourceTree = "<group>"; };
+		B973E733298C51FB0087FD23 /* CustomAssertions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAssertions.swift; sourceTree = "<group>"; };
 		B9963ECA2964B25B00CAD8EE /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
 		B9963ECC2964B88F00CAD8EE /* TrieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrieTests.swift; sourceTree = "<group>"; };
 		B9963ECE2969FC3E00CAD8EE /* QueueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTests.swift; sourceTree = "<group>"; };
@@ -82,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B973E732298C51ED0087FD23 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B973E733298C51FB0087FD23 /* CustomAssertions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		B9C300DC20C8B3DE009FD409 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +134,7 @@
 		B9C300F320C8B3DE009FD409 /* JTDataStructuresTests */ = {
 			isa = PBXGroup;
 			children = (
+				B973E732298C51ED0087FD23 /* Helpers */,
 				B9C3013C20C9A1FB009FD409 /* Factories */,
 				B9C3013B20C9A08C009FD409 /* Graphs */,
 				B9C3013D20C9A21D009FD409 /* HashMaps */,
@@ -137,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				B9963ECA2964B25B00CAD8EE /* Trie.swift */,
+				B973E72E298C2DE60087FD23 /* BInarySearchTree.swift */,
 			);
 			path = Trees;
 			sourceTree = "<group>";
@@ -211,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				B9963ECC2964B88F00CAD8EE /* TrieTests.swift */,
+				B973E730298C3B340087FD23 /* BinarySearchTreeTests.swift */,
 			);
 			path = Trees;
 			sourceTree = "<group>";
@@ -383,6 +400,7 @@
 				B9963ECB2964B25B00CAD8EE /* Trie.swift in Sources */,
 				B9C3014220C9A3CD009FD409 /* DoublyLinkedListIterator.swift in Sources */,
 				B9C3011020C8B461009FD409 /* QuickSorter.swift in Sources */,
+				B973E72F298C2DE60087FD23 /* BInarySearchTree.swift in Sources */,
 				B9C3011320C8B461009FD409 /* Queue.swift in Sources */,
 				B9C3010D20C8B461009FD409 /* PriorityQueue.swift in Sources */,
 				B9C3011420C8B461009FD409 /* DoublyLinkedList.swift in Sources */,
@@ -401,9 +419,11 @@
 				B9963ED1296A004F00CAD8EE /* PriorityQueueTests.swift in Sources */,
 				B9963ED3296A037E00CAD8EE /* StackTests.swift in Sources */,
 				B9963ED5296A080200CAD8EE /* HashMapTests.swift in Sources */,
+				B973E731298C3B340087FD23 /* BinarySearchTreeTests.swift in Sources */,
 				B9963ECD2964B88F00CAD8EE /* TrieTests.swift in Sources */,
 				B9963ED7296B2F0500CAD8EE /* QuickSorterTests.swift in Sources */,
 				B9963ECF2969FC3E00CAD8EE /* QueueTests.swift in Sources */,
+				B973E734298C51FB0087FD23 /* CustomAssertions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

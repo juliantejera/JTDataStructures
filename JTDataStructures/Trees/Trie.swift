@@ -52,7 +52,7 @@ struct Trie {
         currentNode.isTerminating = true
     }
     
-    func isValidPrefix(prefix: String) -> Bool {
+    func isValid(prefix: String) -> Bool {
        node(with: prefix) != nil
     }
     
@@ -85,10 +85,11 @@ struct Trie {
     
     private func wordsWithPrefixHelper(node: Trie.Node, prefix: String, result: inout [String]) {
         for (key, child) in node.children {
+            let word = "\(prefix)\(key)"
             if child.isTerminating {
-                result.append(prefix + String(key))
+                result.append(word)
             }
-            wordsWithPrefixHelper(node: child, prefix: prefix + String(key), result: &result)
+            wordsWithPrefixHelper(node: child, prefix: word, result: &result)
         }
     }
 

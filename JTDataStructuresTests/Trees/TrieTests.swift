@@ -54,16 +54,16 @@ final class TrieTests: XCTestCase {
     func testIsValidPrefix_whenItIsInvalid() {
         let trie = Trie()
         trie.insert(word: "home")
-        XCTAssertFalse(trie.isValidPrefix(prefix: "war"))
+        XCTAssertFalse(trie.isValid(prefix: "war"))
     }
     
     func testIsValidPrefix_whenItIsValid() {
         let trie = Trie()
         trie.insert(word: "home")
-        XCTAssertTrue(trie.isValidPrefix(prefix: "h"))
-        XCTAssertTrue(trie.isValidPrefix(prefix: "ho"))
-        XCTAssertTrue(trie.isValidPrefix(prefix: "hom"))
-        XCTAssertTrue(trie.isValidPrefix(prefix: "home"))
+        XCTAssertTrue(trie.isValid(prefix: "h"))
+        XCTAssertTrue(trie.isValid(prefix: "ho"))
+        XCTAssertTrue(trie.isValid(prefix: "hom"))
+        XCTAssertTrue(trie.isValid(prefix: "home"))
     }
     
     func testWordsWithPrefix_whenThePrefixIsInvalid() {
